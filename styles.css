@@ -1,28 +1,30 @@
 /* Подключение шрифтов */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
 
-/* Обновленная цветовая палитра - СПОРТИВНЫЕ ТОВАРЫ */
+/* Обновленная цветовая палитра - ТЕХНИЧЕСКИЕ ТОВАРЫ (Колонки и наушники) */
 :root {
-  --primary: #2E7D32; /* Зеленый - спорт, здоровье */
-  --primary-light: #4CAF50;
-  --primary-dark: #1B5E20;
-  --secondary: #0277BD; /* Синий - вода, небо */
-  --secondary-light: #03A9F4;
-  --secondary-dark: #01579B;
-  --accent: #FF6D00; /* Оранжевый - энергия, активность */
-  --accent-light: #FF9100;
-  --accent-dark: #E65100;
-  --success: #00C853; /* Зеленый для успеха */
-  --warning: #FFAB00; /* Желтый для предупреждений */
-  --danger: #D50000; /* Красный для ошибок */
-  --light: #F5F5F5;
-  --dark: #212121;
-  --gray: #9E9E9E;
-  --gray-light: #E0E0E0;
-  --gray-lighter: #F5F5F5;
+  --primary: #2C3E50; /* Темно-синий/графитовый - технологии, премиум */
+  --primary-light: #34495E;
+  --primary-dark: #1C2833;
+  --secondary: #9B59B6; /* Фиолетовый - креатив, инновации */
+  --secondary-light: #BB8FCE;
+  --secondary-dark: #7D3C98;
+  --accent: #E74C3C; /* Красный/коралловый - энергия, внимание */
+  --accent-light: #EC7063;
+  --accent-dark: #CB4335;
+  --tech-blue: #3498DB; /* Технологический синий */
+  --tech-green: #2ECC71; /* Зеленый для технологий */
+  --warning: #F39C12; /* Желтый для предупреждений */
+  --danger: #E74C3C; /* Красный для ошибок */
+  --success: #27AE60; /* Зеленый для успеха */
+  --light: #F8F9FA;
+  --dark: #2C3E50;
+  --gray: #7F8C8D;
+  --gray-light: #BDC3C7;
+  --gray-lighter: #ECF0F1;
   --white: #FFFFFF;
   --surface: #FFFFFF;
-  --surface-2: #F5F5F5;
+  --surface-2: #F8F9FA;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -46,7 +48,12 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: var(--dark);
-  background: linear-gradient(135deg, #E8F5E9 0%, #E3F2FD 25%, #FFF8E1 50%, #F3E5F5 75%, #F5F5F5 100%);
+  background: linear-gradient(135deg, 
+    #ECF0F1 0%, 
+    #D6EAF8 25%, 
+    #E8DAEF 50%, 
+    #D5F4E6 75%, 
+    #FADBD8 100%);
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -65,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
-  background: linear-gradient(45deg, var(--primary), var(--accent));
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
@@ -83,14 +90,14 @@ h3 {
   color: var(--primary);
 }
 
-/* Хедер - градиент для спортивного магазина */
+/* Хедер - градиент для технического магазина */
 header {
   background: linear-gradient(135deg, 
-    #2E7D32 0%, 
-    #0277BD 25%, 
-    #FF6D00 50%, 
-    #00C853 75%, 
-    #4CAF50 100%);
+    #2C3E50 0%, 
+    #3498DB 25%, 
+    #9B59B6 50%, 
+    #2ECC71 75%, 
+    #E74C3C 100%);
   color: var(--white);
   padding: 1rem;
   box-shadow: var(--shadow);
@@ -141,7 +148,7 @@ header {
 .search-container-mobile input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
 }
 
 .logo {
@@ -162,7 +169,7 @@ header {
   background: var(--primary-light);
   padding: 0.5rem;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 0 15px rgba(52, 73, 94, 0.4);
   animation: pulse 2s infinite;
   flex-shrink: 0;
 }
@@ -271,7 +278,7 @@ header {
 .search-container input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
 }
 
 .search-container:focus-within {
@@ -304,7 +311,7 @@ select {
 
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
 }
 
 /* Кнопки */
@@ -384,12 +391,12 @@ select:focus {
 }
 
 .btn-buy {
-  background: linear-gradient(135deg, var(--success) 0%, #00B248 100%);
+  background: linear-gradient(135deg, var(--success) 0%, #27AE60 100%);
   color: var(--white);
 }
 
 .btn-buy:hover {
-  background: linear-gradient(135deg, #00B248 0%, #009E40 100%);
+  background: linear-gradient(135deg, #27AE60 0%, #229954 100%);
 }
 
 .btn-favorite {
@@ -406,7 +413,7 @@ select:focus {
 }
 
 .btn-favorite:hover {
-  background: rgba(46, 125, 50, 0.1);
+  background: rgba(44, 62, 80, 0.1);
   color: var(--secondary);
 }
 
@@ -481,7 +488,7 @@ main {
 .filter-group select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255, 109, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
 }
 
 .price-range {
@@ -676,7 +683,7 @@ main {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: var(--secondary);
+  background: var(--tech-blue);
   color: var(--white);
   padding: 0.3rem 0.6rem;
   border-radius: var(--border-radius);
@@ -807,41 +814,41 @@ aside h3 {
   display: block;
 }
 
-/* О магазине - ДЛЯ СПОРТИВНОГО МАГАЗИНА */
+/* О магазине - ДЛЯ ТЕХНИЧЕСКОГО МАГАЗИНА */
 .about-section {
-  background: linear-gradient(135deg, #ffffff 0%, #F5F5F5 50%, #ffffff 100%);
-  color: #212121;
+  background: linear-gradient(135deg, #ffffff 0%, var(--gray-lighter) 50%, #ffffff 100%);
+  color: #2C3E50;
   padding: 2.5rem 0;
   margin: 2rem 0;
-  border: 1px solid #E8F5E9;
+  border: 1px solid #D6EAF8;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h1 {
-  color: #2E7D32;
+  color: var(--primary);
   margin-bottom: 1.5rem;
   font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 .about-section h2 {
-  color: #2E7D32;
+  color: var(--primary);
   font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 1rem;
 }
 
 .about-section h3 {
-  color: #2E7D32;
+  color: var(--primary);
   margin: 1.5rem 0 1rem;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .about-section h4 {
-  color: #2E7D32;
+  color: var(--primary);
   margin: 1.5rem 0 1rem;
 }
 
 .about-section p {
-  color: #424242;
+  color: #2C3E50;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -854,41 +861,41 @@ aside h3 {
 .about-section li {
   margin-bottom: 0.8rem;
   line-height: 1.6;
-  color: #424242;
+  color: #2C3E50;
 }
 
 .about-section strong {
-  color: #FF6D00;
+  color: var(--accent);
 }
 
 .about-section mark {
-  background-color: #E8F5E9;
-  color: #1B5E20;
+  background-color: var(--secondary-light);
+  color: var(--dark);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
 }
 
 .about-section .highlight {
-  background: #F5F5F5;
+  background: var(--surface-2);
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  border-left: 4px solid #0277BD;
-  color: #424242;
+  border-left: 4px solid var(--tech-blue);
+  color: #2C3E50;
   margin: 1.5rem 0;
 }
 
 .about-section .container {
-  color: #424242;
+  color: #2C3E50;
 }
 
 .about-section article {
-  color: #424242;
+  color: #2C3E50;
   margin-bottom: 1.5rem;
 }
 
 .about-section ul li::before {
   content: "✓ ";
-  color: #00C853;
+  color: var(--success);
   font-weight: bold;
   margin-right: 0.5rem;
 }
@@ -1233,7 +1240,7 @@ footer {
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255, 109, 0, 0.1);
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
 }
 
 .form-row {
@@ -1382,27 +1389,27 @@ footer {
 }
 
 .status-new {
-  background: rgba(46, 125, 50, 0.1);
+  background: rgba(44, 62, 80, 0.1);
   color: var(--primary);
 }
 
 .status-processing {
-  background: rgba(255, 171, 0, 0.1);
-  color: #FFAB00;
+  background: rgba(243, 156, 18, 0.1);
+  color: #F39C12;
 }
 
 .status-shipped {
-  background: rgba(255, 109, 0, 0.1);
+  background: rgba(231, 76, 60, 0.1);
   color: var(--accent);
 }
 
 .status-delivered {
-  background: rgba(0, 200, 83, 0.1);
-  color: #00C853;
+  background: rgba(39, 174, 96, 0.1);
+  color: #27AE60;
 }
 
 .status-cancelled {
-  background: rgba(213, 0, 0, 0.1);
+  background: rgba(231, 76, 60, 0.1);
   color: var(--danger);
 }
 
@@ -1661,7 +1668,7 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* Стили для информации о доставке */
 .delivery-notice {
-  background: rgba(255, 109, 0, 0.1);
+  background: rgba(231, 76, 60, 0.1);
   padding: 1rem;
   border-radius: var(--border-radius);
   margin: 1rem 0;
@@ -2288,13 +2295,13 @@ button:focus, input:focus, select:focus, textarea:focus {
   padding: 15px;
   background-color: #f8f9fa;
   border-radius: 8px;
-  border-left: 4px solid #007bff;
+  border-left: 4px solid var(--tech-blue);
   display: flex;
   align-items: center;
 }
 
 .manager-notice i {
-  color: #007bff;
+  color: var(--tech-blue);
   margin-right: 10px;
   font-size: 1.2rem;
 }
@@ -2556,22 +2563,22 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 .ttn-info {
   background: #f0f8ff;
-  border-left-color: #007bff;
+  border-left-color: var(--tech-blue);
 }
 
 .ttn-warning {
   background: #fff3cd;
-  border-left-color: #ffc107;
+  border-left-color: var(--warning);
 }
 
 /* Стили для кнопки ТТН */
 .btn-ttn {
-  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  background: linear-gradient(135deg, var(--tech-blue) 0%, #2980B9 100%);
   color: white;
 }
 
 .btn-ttn:hover {
-  background: linear-gradient(135deg, #138496 0%, #117a8b 100%);
+  background: linear-gradient(135deg, #2980B9 0%, #2471A3 100%);
 }
 
 /* Стили для ссылки отслеживания */
@@ -2579,16 +2586,16 @@ button:focus, input:focus, select:focus, textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #007bff;
+  color: var(--tech-blue);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 1px solid #007bff;
+  border: 1px solid var(--tech-blue);
   border-radius: var(--border-radius);
   transition: var(--transition);
 }
 
 .tracking-link:hover {
-  background: #007bff;
+  background: var(--tech-blue);
   color: white;
   text-decoration: none;
 }
@@ -2942,13 +2949,13 @@ body.search-suggestions-open {
 
 .category-item:hover {
     background: #e9ecef;
-    border-color: #007bff;
+    border-color: var(--tech-blue);
 }
 
 .category-item.active {
-    background: #007bff;
+    background: var(--tech-blue);
     color: white;
-    border-color: #007bff;
+    border-color: var(--tech-blue);
 }
 
 .category-item .category-count {
@@ -2987,9 +2994,9 @@ body.search-suggestions-open {
 }
 
 .btn-category:hover {
-    background: #007bff;
+    background: var(--tech-blue);
     color: white;
-    border-color: #007bff;
+    border-color: var(--tech-blue);
 }
 
 /* Стили для улучшенных скелетонов */
@@ -3064,7 +3071,7 @@ body.search-suggestions-open {
   width: 50px;
   height: 50px;
   border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  border-top: 5px solid var(--tech-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 20px;
@@ -3600,7 +3607,7 @@ main {
 
 .profile-avatar {
     font-size: 60px;
-    color: #3498db;
+    color: var(--tech-blue);
 }
 
 .profile-details p {
@@ -3632,7 +3639,7 @@ main {
 
 .stat-item i {
     font-size: 24px;
-    color: #3498db;
+    color: var(--tech-blue);
     margin-bottom: 8px;
 }
 
@@ -3640,7 +3647,7 @@ main {
     display: block;
     font-size: 24px;
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--dark);
 }
 
 .stat-label {
@@ -3655,27 +3662,27 @@ main {
     padding: 20px;
     margin-bottom: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid #3498db;
+    border-left: 4px solid var(--tech-blue);
 }
 
 .user-order-card.new {
-    border-left-color: #3498db;
+    border-left-color: var(--tech-blue);
 }
 
 .user-order-card.processing {
-    border-left-color: #f39c12;
+    border-left-color: var(--warning);
 }
 
 .user-order-card.shipped {
-    border-left-color: #9b59b6;
+    border-left-color: var(--secondary);
 }
 
 .user-order-card.delivered {
-    border-left-color: #27ae60;
+    border-left-color: var(--success);
 }
 
 .user-order-card.cancelled {
-    border-left-color: #e74c3c;
+    border-left-color: var(--danger);
 }
 
 .order-card-header {
@@ -3687,7 +3694,7 @@ main {
 
 .order-id {
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--dark);
 }
 
 .order-date {
@@ -3710,34 +3717,34 @@ main {
 }
 
 .status-new {
-    background: #e3f2fd;
-    color: #1976d2;
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--tech-blue);
 }
 
 .status-processing {
-    background: #fff3e0;
-    color: #f57c00;
+    background: rgba(243, 156, 18, 0.1);
+    color: var(--warning);
 }
 
 .status-shipped {
-    background: #f3e5f5;
-    color: #7b1fa2;
+    background: rgba(155, 89, 182, 0.1);
+    color: var(--secondary);
 }
 
 .status-delivered {
-    background: #e8f5e8;
-    color: #388e3c;
+    background: rgba(39, 174, 96, 0.1);
+    color: var(--success);
 }
 
 .status-cancelled {
-    background: #ffebee;
-    color: #d32f2f;
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--danger);
 }
 
 .order-total {
     font-size: 18px;
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--dark);
 }
 
 .order-card-delivery p {
@@ -3746,14 +3753,14 @@ main {
 }
 
 .order-ttn-info {
-    background: #e3f2fd;
+    background: rgba(52, 152, 219, 0.1);
     padding: 10px;
     border-radius: 6px;
     margin: 10px 0;
 }
 
 .track-link {
-    color: #1976d2;
+    color: var(--tech-blue);
     text-decoration: none;
     font-size: 14px;
 }
@@ -3788,7 +3795,7 @@ main {
 .error-message {
     text-align: center;
     padding: 40px 20px;
-    color: #e74c3c;
+    color: var(--danger);
 }
 
 .error-message i {
@@ -4314,9 +4321,9 @@ main {
 
 .gender-btn {
     padding: 8px 16px;
-    border: 2px solid #2E7D32;
+    border: 2px solid var(--primary);
     background: white;
-    color: #2E7D32;
+    color: var(--primary);
     border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
@@ -4324,14 +4331,14 @@ main {
 }
 
 .gender-btn:hover {
-    background: #E8F5E9;
+    background: rgba(44, 62, 80, 0.1);
     transform: translateY(-2px);
 }
 
 .gender-btn.active {
-    background: #2E7D32;
+    background: var(--primary);
     color: white;
-    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -4371,14 +4378,14 @@ main {
     background: var(--primary-light);
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.2);
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.2);
 }
 
 .sport-type-btn.active {
     background: var(--primary);
     color: var(--white);
     border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
 }
 
 /* Адаптивность для фильтра видов спорта */
@@ -4505,7 +4512,7 @@ main {
 
 .user-dropdown a:hover {
     background-color: #f8f9fa;
-    color: #2E8B57;
+    color: var(--primary);
 }
 
 .user-menu:hover .user-dropdown {
