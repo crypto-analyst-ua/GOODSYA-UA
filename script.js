@@ -2150,8 +2150,8 @@ function initApp() {
         localStorage.setItem('products_backup', JSON.stringify(products));
       })
       .catch(jsonError => {
-        console.error("Помилка завантаження з JSON:", jsonError);
-        showNotification("Не вдалося завантажити товари", "error");
+        console.error("");
+        showNotification("");
         isProductsLoading = false;
         renderProducts();
       });
@@ -2354,8 +2354,8 @@ function loadProducts() {
       }
     })
     .catch((error) => {
-      console.error("Помилка завантаження з Firestore:", error);
-      showNotification("Помилка завантаження товарів", "error");
+      console.error("");
+      showNotification("");
       isProductsLoading = false;
       
       const data = localStorage.getItem('products_backup');
@@ -4715,8 +4715,8 @@ function loadAdminProducts() {
       });
     })
     .catch((error) => {
-      console.error("Помилка завантаження товарів: ", error);
-      productsList.innerHTML = '<p>Помилка завантаження товарів</p>';
+      console.error("");
+      productsList.innerHTML = '<p></p>';
     });
 }
 
