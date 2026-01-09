@@ -10,18 +10,18 @@
     <meta name="keywords" content="товари для кухні, бьюти товари, товари для дому, електроніка, кухонне приладдя, побутова техніка, смарт гаджети, bluetooth колонки, навушники, фітнес браслети, годинники, фонари, лампочки, доставка по Україні">
     <meta name="author" content="GOODSYA UA">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://goodsyaua.web.app/">
+    <link rel="canonical" href="https://goodsya-ua.web.app/">
 
     <!-- Open Graph -->
     <meta property="og:locale" content="uk_UA">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Інтернет-магазин якісних товарів для дому, кухні та електроніки | GOODSYA UA">
     <meta property="og:description" content="Найкращі товари для дому, кухні, краси та електроніки з доставкою по Україні: кухонне приладдя, бьюти-товари, електроніка, смарт-гаджети. Гарантія якості — GOODSYA UA.">
-    <meta property="og:image" content="https://goodsyaua.web.app/general-product-image.jpg">
+    <meta property="og:image" content="https://goodsya-ua.web.app/general-product-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Товари для дому та електроніки — GOODSYA UA">
-    <meta property="og:url" content="https://goodsyaua.web.app/">
+    <meta property="og:url" content="https://goodsya-ua.web.app/">
     <meta property="og:site_name" content="GOODSYA UA">
 
     <!-- Favicons -->
@@ -169,6 +169,7 @@
         margin: 0;
         padding: 0;
         background: white;
+        position: relative;
     }
 
     .full-width-banner {
@@ -179,11 +180,48 @@
         object-fit: contain;
     }
 
+    /* Кнопка закрытия баннера */
+    .banner-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        transition: all 0.3s ease;
+    }
+
+    .banner-close-btn:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+    }
+
+    .banner-close-btn:active {
+        transform: scale(0.95);
+    }
+
     /* Для мобильных устройств */
     @media (max-width: 768px) {
         .full-width-banner {
             min-height: 150px;
             object-fit: cover;
+        }
+        
+        .banner-close-btn {
+            width: 28px;
+            height: 28px;
+            font-size: 16px;
+            top: 8px;
+            right: 8px;
         }
     }
     
@@ -339,10 +377,10 @@
             "@graph": [
                 {
                     "@type": "Organization",
-                    "@id": "https://goodsyaua.web.app/#organization",
+                    "@id": "https://goodsya-ua.web.app/#organization",
                     "name": "GOODSYA UA",
-                    "url": "https://goodsyaua.web.app/",
-                    "logo": "https://goodsyaua.web.app/logo.png",
+                    "url": "https://goodsya-ua.web.app/",
+                    "logo": "https://goodsya-ua.web.app/logo.png",
                     "description": "Інтернет-магазин якісних товарів для дому, кухні та електроніки в Україні",
                     "address": {
                         "@type": "PostalAddress",
@@ -362,33 +400,33 @@
                 },
                 {
                     "@type": "WebSite",
-                    "@id": "https://goodsyaua.web.app/#website",
-                    "url": "https://goodsyaua.web.app/",
+                    "@id": "https://goodsya-ua.web.app/#website",
+                    "url": "https://goodsya-ua.web.app/",
                     "name": "GOODSYA UA",
                     "description": "Інтернет-магазин якісних товарів для дому, кухні та електроніки",
                     "publisher": {
-                        "@id": "https://goodsyaua.web.app/#organization"
+                        "@id": "https://goodsya-ua.web.app/#organization"
                     },
                     "potentialAction": {
                         "@type": "SearchAction",
-                        "target": "https://goodsyaua.web.app/search?q={search_term_string}",
+                        "target": "https://goodsya-ua.web.app/search?q={search_term_string}",
                         "query-input": "required name=search_term_string"
                     }
                 },
                 {
                     "@type": "Store",
-                    "@id": "https://goodsyaua.web.app/#store",
+                    "@id": "https://goodsya-ua.web.app/#store",
                     "name": "GOODSYA UA",
                     "description": "Інтернет-магазин якісних товарів для дому, кухні та електроніки в Україні. Все для кухні, бьюти-товари, товари для дому та саду, електроніка та гаджети, освітлення, годинники та аксесуари",
-                    "url": "https://goodsyaua.web.app/",
+                    "url": "https://goodsya-ua.web.app/",
                     "telephone": "+380684296978",
                     "address": {
                         "@type": "PostalAddress",
                         "addressCountry": "UA",
                         "addressLocality": "Україна"
                     },
-                    "image": "https://goodsyaua.web.app/general-product-image.jpg",
-                    "logo": "https://goodsyaua.web.app/logo.png",
+                    "image": "https://goodsya-ua.web.app/general-product-image.jpg",
+                    "logo": "https://goodsya-ua.web.app/logo.png",
                     "openingHours": "Mo-Su 09:00-21:00",
                     "priceRange": "₴",
                     "aggregateRating": {
@@ -397,7 +435,7 @@
                         "reviewCount": "215"
                     },
                     "parentOrganization": {
-                        "@id": "https://goodsyaua.web.app/#organization"
+                        "@id": "https://goodsya-ua.web.app/#organization"
                     }
                 }
             ]
@@ -483,8 +521,11 @@
         </div>
     </header>
 
-    <!-- Рекламный баннер -->
-    <div class="ad-banner-container">
+    <!-- Рекламный баннер с кнопкой закрытия -->
+    <div class="ad-banner-container" id="ad-banner">
+        <button class="banner-close-btn" onclick="closeAdBanner()" aria-label="Закрити рекламний баннер">
+            <i class="fas fa-times"></i>
+        </button>
         <img src="file_00000000d0c472469936389705c8cf86.png" 
              alt="Безпечна покупка та швидка доставка якісних товарів для дому по Україні - GOODSYA UA"
              class="full-width-banner">
@@ -571,7 +612,7 @@
 
         <section role="main">
             <div class="products-header">
-                <h1 id="products-title">Каталог якісних товарів для дому, кухні та електроніки — купити в Україні з доставкою | GOODSYA UA</h1>
+                <h1 id="products-title">Каталог якісних товарів для дому, кухні та електроніки — купити в Україні з доставкою</h1>
                 
                 <!-- Обновленные красивые кнопки с иконками -->
                 <div class="source-tabs" role="tablist">
@@ -964,6 +1005,37 @@
 
     <!-- Добавьте этот скрипт перед вашим script.js -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script>
+        // Функция для закрытия рекламного баннера
+        function closeAdBanner() {
+            const banner = document.getElementById('ad-banner');
+            if (banner) {
+                banner.style.display = 'none';
+                
+                // Сохраняем состояние в localStorage, чтобы баннер не показывался снова
+                try {
+                    localStorage.setItem('adBannerClosed', 'true');
+                } catch (e) {
+                    console.log('Не удалось сохранить состояние баннера в localStorage');
+                }
+            }
+        }
+        
+        // При загрузке страницы проверяем, был ли баннер закрыт ранее
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                const adBannerClosed = localStorage.getItem('adBannerClosed');
+                if (adBannerClosed === 'true') {
+                    const banner = document.getElementById('ad-banner');
+                    if (banner) {
+                        banner.style.display = 'none';
+                    }
+                }
+            } catch (e) {
+                console.log('Не удалось проверить состояние баннера в localStorage');
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
