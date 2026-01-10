@@ -167,6 +167,7 @@
     .china-wide-banner .banner-content {
         position: relative;
         z-index: 2;
+        padding-right: 40px; /* Место для кнопки закрытия */
     }
 
     .china-wide-banner h3 {
@@ -226,10 +227,11 @@
         background: linear-gradient(145deg, #e3f2fd, #bbdefb);
         border-left: 5px solid #2196F3;
         padding: 18px 20px;
-        margin: 15px 0 25px 0;
+        margin: 15px 0 15px 0;
         border-radius: 0 10px 10px 0;
         box-shadow: 0 3px 10px rgba(33, 150, 243, 0.2);
         transition: all 0.3s ease;
+        position: relative;
     }
 
     .availability-notice:hover {
@@ -243,6 +245,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 15px;
+        padding-right: 40px; /* Место для кнопки закрытия */
     }
 
     .availability-text {
@@ -318,6 +321,136 @@
         font-size: 20px;
     }
 
+    /* Стили для баннера условий возврата */
+    .return-policy-banner {
+        width: 100%;
+        background: linear-gradient(145deg, #fff3cd, #ffeaa7);
+        border: 2px solid #ffc107;
+        border-left: 5px solid #ff9800;
+        padding: 15px 20px;
+        margin: 15px 0 25px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .return-policy-banner:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(255, 152, 0, 0.3);
+    }
+
+    .return-policy-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        position: relative;
+        padding-right: 40px; /* Место для кнопки закрытия */
+    }
+
+    .return-policy-icon {
+        flex-shrink: 0;
+        margin-top: 3px;
+    }
+
+    .return-policy-icon i {
+        font-size: 24px;
+        color: #ff9800;
+    }
+
+    .return-policy-text {
+        flex: 1;
+    }
+
+    .return-policy-text h4 {
+        margin: 0 0 10px 0;
+        color: #e65100;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .return-policy-text p {
+        margin: 5px 0;
+        color: #bf360c;
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .return-policy-text strong {
+        color: #d84315;
+    }
+
+    .policy-details-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #1565c0;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background: rgba(33, 150, 243, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .policy-details-link:hover {
+        background: rgba(33, 150, 243, 0.2);
+        text-decoration: underline;
+    }
+
+    /* Общие стили для кнопок закрытия баннеров */
+    .banner-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 18px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+
+    .banner-close-btn:hover {
+        background: rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.8);
+        transform: scale(1.1);
+    }
+
+    /* Конкретные цвета для кнопок закрытия в разных баннерах */
+    .china-wide-banner .banner-close-btn {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .china-wide-banner .banner-close-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+    
+    .availability-notice .banner-close-btn {
+        color: #1565C0;
+    }
+    
+    .availability-notice .banner-close-btn:hover {
+        background: rgba(33, 150, 243, 0.1);
+        color: #0D47A1;
+    }
+    
+    .return-policy-banner .banner-close-btn {
+        color: #ff9800;
+    }
+    
+    .return-policy-banner .banner-close-btn:hover {
+        background: rgba(255, 152, 0, 0.1);
+        color: #e65100;
+    }
+
     /* Адаптивность для мобильных */
     @media (max-width: 768px) {
         .source-tabs {
@@ -355,14 +488,19 @@
             padding: 4px 12px;
         }
         
+        .china-wide-banner .banner-content {
+            padding-right: 35px;
+        }
+        
         .availability-notice {
             padding: 15px;
-            margin: 10px 0 20px 0;
+            margin: 10px 0 15px 0;
         }
         
         .availability-notice-content {
             flex-direction: column;
             align-items: stretch;
+            padding-right: 35px;
         }
         
         .availability-text {
@@ -377,6 +515,29 @@
             flex: 1;
             justify-content: center;
             min-width: 140px;
+        }
+        
+        .return-policy-banner {
+            padding: 15px;
+            margin: 15px 0 20px 0;
+        }
+        
+        .return-policy-content {
+            flex-direction: column;
+            gap: 10px;
+            padding-right: 35px;
+        }
+        
+        .return-policy-icon {
+            align-self: flex-start;
+        }
+        
+        .return-policy-text h4 {
+            font-size: 16px;
+        }
+        
+        .return-policy-text p {
+            font-size: 14px;
         }
     }
 
@@ -397,12 +558,46 @@
             font-size: 20px;
         }
         
+        .china-wide-banner .banner-content {
+            padding-right: 30px;
+        }
+        
         .availability-links {
             flex-direction: column;
         }
         
         .availability-link {
             width: 100%;
+        }
+        
+        .availability-notice-content {
+            padding-right: 30px;
+        }
+        
+        .return-policy-banner {
+            padding: 12px;
+        }
+        
+        .return-policy-content {
+            padding-right: 30px;
+        }
+        
+        .return-policy-text h4 {
+            font-size: 15px;
+            padding-right: 25px;
+        }
+        
+        .policy-details-link {
+            font-size: 13px;
+            padding: 4px 8px;
+        }
+        
+        .banner-close-btn {
+            width: 25px;
+            height: 25px;
+            font-size: 16px;
+            top: 8px;
+            right: 8px;
         }
     }
     
@@ -440,32 +635,19 @@
         object-fit: contain;
     }
 
-    /* Кнопка закрытия баннера */
-    .banner-close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 32px;
-        height: 32px;
+    /* Кнопка закрытия рекламного баннера (уже существует) */
+    .ad-banner-container .banner-close-btn {
         background-color: rgba(0, 0, 0, 0.6);
-        border: none;
-        border-radius: 50%;
         color: white;
-        font-size: 18px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-        transition: all 0.3s ease;
+        border: none;
     }
 
-    .banner-close-btn:hover {
+    .ad-banner-container .banner-close-btn:hover {
         background-color: rgba(0, 0, 0, 0.8);
         transform: scale(1.1);
     }
 
-    .banner-close-btn:active {
+    .ad-banner-container .banner-close-btn:active {
         transform: scale(0.95);
     }
 
@@ -474,14 +656,6 @@
         .full-width-banner {
             min-height: 150px;
             object-fit: cover;
-        }
-        
-        .banner-close-btn {
-            width: 28px;
-            height: 28px;
-            font-size: 16px;
-            top: 8px;
-            right: 8px;
         }
     }
     
@@ -876,6 +1050,9 @@
                 
                 <!-- Полноширинный баннер товаров из Китая на украинском -->
                 <div class="china-wide-banner" onclick="showChinaGoods()" role="banner" aria-label="Баннер товарів з Китаю за найнижчими цінами">
+                    <button class="banner-close-btn" onclick="closeChinaBanner(event)" aria-label="Закрити баннер">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <div class="banner-content">
                         <h3>
                             <i class="fas fa-globe-asia icon" aria-hidden="true"></i>
@@ -889,6 +1066,9 @@
                 
                 <!-- Уведомление о необходимости уточнения наличия -->
                 <div class="availability-notice" role="alert">
+                    <button class="banner-close-btn" onclick="closeAvailabilityNotice(event)" aria-label="Закрити баннер">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <div class="availability-notice-content">
                         <div class="availability-text">
                             <h4><i class="fas fa-info-circle"></i> Важлива інформація для покупців!</h4>
@@ -903,6 +1083,28 @@
                             <a href="https://t.me/Voanarhes" class="availability-link telegram" target="_blank" rel="noopener">
                                 <i class="fab fa-telegram"></i>
                                 Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Баннер с условиями возврата -->
+                <div class="return-policy-banner" id="return-policy-banner" role="alert">
+                    <button class="banner-close-btn" onclick="closeReturnPolicyBanner(event)" aria-label="Закрити баннер">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="return-policy-content">
+                        <div class="return-policy-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="return-policy-text">
+                            <h4><i class="fas fa-info-circle"></i> Важливо! Умови повернення та обміну товару</h4>
+                            <p><strong>Обмін або повернення коштів можливий лише в день отримання замовлення!</strong></p>
+                            <p>• При виявленні браку - негайно повідомте нас з фотофіксацією</p>
+                            <p>• Після використання товару повернення неможливе</p>
+                            <p>• Пошкодження при доставці - відмовляйтесь на відділенні</p>
+                            <a href="#" onclick="openReturnPolicyDetails(); return false;" class="policy-details-link">
+                                Детальніше про умови повернення
                             </a>
                         </div>
                     </div>
@@ -1254,9 +1456,39 @@
                     <h2>5. Гарантія та повернення</h2>
                     <ul>
                         <li>5.1. На всі товари поширюється гарантія виробника. Термін гарантії вказаний у картці товару або в супровідних документах.</li>
-                        <li>5.2. Повернення товару належної якості можливе протягом 14 днів з моменту покупки за дотримання умов: товарний вигляд, цілісність упаковки, збережені ярлики та комплектуючі.</li>
-                        <li>5.3. Повернення дефектного товару здійснюється відповідно до чинного законодавства — обмін або повернення коштів проводиться після перевірки товару.</li>
-                        <li>5.4. Для повернення товару через Укрпошту доступні всі стандартні процедури повернення.</li>
+                        <li>5.2. <strong>Обмін та повернення:</strong> 
+                            <ul>
+                                <li>Обміняти товар або повернути кошти клієнт може <strong>лише в день отримання замовлення</strong>.</li>
+                                <li>Якщо клієнт виявив брак у день отримання замовлення, ми можемо замінити товар або повернути гроші.</li>
+                                <li>Для підтвердження браку бажано надати фотофіксацію.</li>
+                                <li>Після кількох днів використання товару можливість повернути його відсутня.</li>
+                            </ul>
+                        </li>
+                        <li>5.3. <strong>Причини відсутності повернення після використання:</strong>
+                            <ul>
+                                <li>Оцінка якості товару — суб'єктивна. Якщо клієнт купує репліку (копію) товару за 200 грн, вона не може бути настільки ж якісною, як оригінальний товар за 2000 грн.</li>
+                                <li>Клієнт може використовувати товар не за призначенням і тим самим пошкодити його.</li>
+                                <li>Офіційну гарантію надає лише виробник у Китаї, а відправляти товар до Китаю на ремонт немає сенсу.</li>
+                                <li>Клієнт може не розібратися з функціоналом товару (наприклад, індукційні плити під час увімкнення працюють лише тоді, коли на них стоїть посуд).</li>
+                            </ul>
+                        </li>
+                        <li>5.4. <strong>Алгоритм дій при виявленні браку:</strong>
+                            <ul>
+                                <li>Повідомте нас про бажання клієнта повернути товар та вкажіть номер замовлення.</li>
+                                <li>Ми підтвердимо повернення та надамо дані для відправлення товару.</li>
+                                <li>Клієнт відправляє товар, оплачуючи доставку самостійно.</li>
+                            </ul>
+                        </li>
+                        <li>5.5. <strong>Важливо розрізняти:</strong>
+                            <ul>
+                                <li><strong>Брак</strong> — виробничий дефект.</li>
+                                <li><strong>Фізичне пошкодження при доставці</strong> — якщо товар приїхав пошкодженим, клієнт повинен відмовитися від нього на відділенні та негайно повідомити нас.</li>
+                                <li>Якщо клієнт забрав посилку (особливо при накладеному платежі) і вже вдома виявив пошкодження, вимагати компенсацію від служби доставки неможливо.</li>
+                            </ul>
+                        </li>
+                        <li>5.6. Повернення товару належної якості можливе протягом 14 днів з моменту покупки за дотримання умов: товарний вигляд, цілісність упаковки, збережені ярлики та комплектуючі.</li>
+                        <li>5.7. Повернення дефектного товару здійснюється відповідно до чинного законодавства — обмін або повернення коштів проводиться після перевірки товару.</li>
+                        <li>5.8. Для повернення товару через Укрпошту доступні всі стандартні процедури повернення.</li>
                     </ul>
                 </section>
 
@@ -1351,8 +1583,107 @@
             }
         }
         
+        // Функция закрытия баннера товаров из Китая
+        function closeChinaBanner(event) {
+            if (event) {
+                event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал клик по баннеру
+            }
+            
+            const banner = document.querySelector('.china-wide-banner');
+            if (banner) {
+                banner.style.display = 'none';
+                
+                // Сохраняем в localStorage, что баннер был закрыт
+                try {
+                    localStorage.setItem('chinaBannerClosed', 'true');
+                } catch (e) {
+                    console.log('Не удалось сохранить состояние баннера в localStorage');
+                }
+            }
+        }
+        
+        // Функция закрытия баннера условий возврата
+        function closeReturnPolicyBanner(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            
+            const banner = document.getElementById('return-policy-banner');
+            if (banner) {
+                banner.style.display = 'none';
+                
+                // Сохраняем в localStorage, что баннер был закрыт
+                try {
+                    localStorage.setItem('returnPolicyBannerClosed', 'true');
+                } catch (e) {
+                    console.log('Не удалось сохранить состояние баннера в localStorage');
+                }
+            }
+        }
+
+        // Функция закрытия уведомления о наличии товара
+        function closeAvailabilityNotice(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            
+            const banner = document.querySelector('.availability-notice');
+            if (banner) {
+                banner.style.display = 'none';
+                
+                // Сохраняем в localStorage, что баннер был закрыт
+                try {
+                    localStorage.setItem('availabilityNoticeClosed', 'true');
+                } catch (e) {
+                    console.log('Не удалось сохранить состояние баннера в localStorage');
+                }
+            }
+        }
+
+        // Функция открытия детальной информации об условиях возврата
+        function openReturnPolicyDetails() {
+            // Прокрутка к разделу правил
+            showNotification('Прокручуємо до розділу з умовами повернення...');
+            
+            // Открываем модальное окно с правилами
+            openRules();
+            
+            // Прокрутка к разделу гарантии и возврата внутри модального окна
+            setTimeout(() => {
+                const warrantySection = document.querySelector('#warranty_return');
+                if (warrantySection) {
+                    warrantySection.scrollIntoView({ behavior: 'smooth' });
+                    // Подсветка раздела
+                    warrantySection.style.backgroundColor = 'rgba(255, 245, 157, 0.3)';
+                    warrantySection.style.padding = '15px';
+                    warrantySection.style.borderRadius = '5px';
+                    warrantySection.style.transition = 'background-color 1s';
+                    
+                    setTimeout(() => {
+                        warrantySection.style.backgroundColor = '';
+                        warrantySection.style.padding = '';
+                        warrantySection.style.borderRadius = '';
+                    }, 3000);
+                }
+            }, 500);
+        }
+
         // При загрузке страницы проверяем, был ли баннер закрыт ранее
         document.addEventListener('DOMContentLoaded', function() {
+            // Проверяем баннер условий возврата
+            try {
+                const returnPolicyBannerClosed = localStorage.getItem('returnPolicyBannerClosed');
+                if (returnPolicyBannerClosed === 'true') {
+                    const banner = document.getElementById('return-policy-banner');
+                    if (banner) {
+                        banner.style.display = 'none';
+                    }
+                }
+            } catch (e) {
+                console.log('Не удалось проверить состояние баннера в localStorage');
+            }
+            
+            // Проверяем рекламный баннер
             try {
                 const adBannerClosed = localStorage.getItem('adBannerClosed');
                 if (adBannerClosed === 'true') {
@@ -1362,8 +1693,68 @@
                     }
                 }
             } catch (e) {
-                console.log('Не удалось проверить состояние баннера в localStorage');
+                console.log('Не удалось проверить состояние рекламного баннера в localStorage');
             }
+            
+            // Проверяем баннер товаров из Китая
+            try {
+                const chinaBannerClosed = localStorage.getItem('chinaBannerClosed');
+                if (chinaBannerClosed === 'true') {
+                    const banner = document.querySelector('.china-wide-banner');
+                    if (banner) {
+                        banner.style.display = 'none';
+                    }
+                }
+            } catch (e) {
+                console.log('Не удалось проверить состояние китайского баннера в localStorage');
+            }
+            
+            // Проверяем уведомление о наличии товара
+            try {
+                const availabilityNoticeClosed = localStorage.getItem('availabilityNoticeClosed');
+                if (availabilityNoticeClosed === 'true') {
+                    const banner = document.querySelector('.availability-notice');
+                    if (banner) {
+                        banner.style.display = 'none';
+                    }
+                }
+            } catch (e) {
+                console.log('Не удалось проверить состояние уведомления о наличии в localStorage');
+            }
+            
+            // Также можно показывать баннер при добавлении товара в корзину
+            // Добавим слушатель на все кнопки "Добавить в корзину" (когда они появятся)
+            // Это нужно делать после загрузки товаров, поэтому используем setTimeout или наблюдатель
+            setTimeout(() => {
+                // Находим все кнопки добавления в корзину
+                const addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
+                addToCartButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Показываем баннер, если он был скрыт
+                        const banner = document.getElementById('return-policy-banner');
+                        if (banner && banner.style.display === 'none') {
+                            banner.style.display = 'block';
+                            // Анимированное появление
+                            banner.style.opacity = '0';
+                            banner.style.transform = 'translateY(-10px)';
+                            
+                            let opacity = 0;
+                            let pos = -10;
+                            const animate = () => {
+                                opacity += 0.05;
+                                pos += 0.5;
+                                banner.style.opacity = opacity;
+                                banner.style.transform = `translateY(${pos}px)`;
+                                
+                                if (opacity < 1) {
+                                    requestAnimationFrame(animate);
+                                }
+                            };
+                            animate();
+                        }
+                    });
+                });
+            }, 2000); // Даем время на загрузку товаров
         });
     </script>
     <script src="script.js"></script>
