@@ -142,6 +142,182 @@
         white-space: nowrap;
     }
 
+    /* Стили для полноширинного баннера товаров из Китая */
+    .china-wide-banner {
+        width: 100%;
+        background: linear-gradient(145deg, #ff6b6b, #ff8e53, #ff6b6b);
+        color: white;
+        text-align: center;
+        padding: 25px 20px;
+        margin: 25px 0;
+        cursor: pointer;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        transition: all 0.3s ease;
+        border: 3px solid #ff4757;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .china-wide-banner:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+    }
+
+    .china-wide-banner .banner-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .china-wide-banner h3 {
+        margin: 0 0 10px 0;
+        font-size: 28px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .china-wide-banner p {
+        margin: 5px 0;
+        font-size: 18px;
+        opacity: 0.95;
+        font-weight: 500;
+    }
+
+    .china-wide-banner .price-tag {
+        display: inline-block;
+        background: #ff3838;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin-top: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        animation: pulse 2s infinite;
+    }
+
+    .china-wide-banner::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.2) 45%,
+            rgba(255, 255, 255, 0.1) 100%
+        );
+        transform: rotate(45deg);
+        animation: shine 3s infinite;
+    }
+
+    .china-wide-banner .icon {
+        font-size: 24px;
+        margin-right: 10px;
+        color: #ffdd59;
+        animation: bounce 2s infinite;
+    }
+
+    /* Стили для уведомления о наличии товара */
+    .availability-notice {
+        width: 100%;
+        background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+        border-left: 5px solid #2196F3;
+        padding: 18px 20px;
+        margin: 15px 0 25px 0;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 0 3px 10px rgba(33, 150, 243, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .availability-notice:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+    }
+
+    .availability-notice-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .availability-text {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .availability-text h4 {
+        margin: 0 0 8px 0;
+        color: #1565C0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .availability-text p {
+        margin: 0;
+        color: #1976D2;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .availability-text strong {
+        color: #0D47A1;
+    }
+
+    .availability-links {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .availability-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border: 2px solid transparent;
+    }
+
+    .availability-link.whatsapp {
+        color: #25D366;
+        border-color: #25D366;
+    }
+
+    .availability-link.telegram {
+        color: #0088cc;
+        border-color: #0088cc;
+    }
+
+    .availability-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    }
+
+    .availability-link.whatsapp:hover {
+        background: #25D366;
+        color: white;
+    }
+
+    .availability-link.telegram:hover {
+        background: #0088cc;
+        color: white;
+    }
+
+    .availability-link i {
+        font-size: 20px;
+    }
+
     /* Адаптивность для мобильных */
     @media (max-width: 768px) {
         .source-tabs {
@@ -160,6 +336,90 @@
         .tab-text {
             font-size: 14px;
         }
+        
+        .china-wide-banner {
+            padding: 20px 15px;
+            margin: 20px 0;
+        }
+        
+        .china-wide-banner h3 {
+            font-size: 22px;
+        }
+        
+        .china-wide-banner p {
+            font-size: 16px;
+        }
+        
+        .china-wide-banner .price-tag {
+            font-size: 14px;
+            padding: 4px 12px;
+        }
+        
+        .availability-notice {
+            padding: 15px;
+            margin: 10px 0 20px 0;
+        }
+        
+        .availability-notice-content {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        .availability-text {
+            min-width: 100%;
+        }
+        
+        .availability-links {
+            justify-content: center;
+        }
+        
+        .availability-link {
+            flex: 1;
+            justify-content: center;
+            min-width: 140px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .china-wide-banner {
+            padding: 18px 12px;
+        }
+        
+        .china-wide-banner h3 {
+            font-size: 20px;
+        }
+        
+        .china-wide-banner p {
+            font-size: 14px;
+        }
+        
+        .china-wide-banner .icon {
+            font-size: 20px;
+        }
+        
+        .availability-links {
+            flex-direction: column;
+        }
+        
+        .availability-link {
+            width: 100%;
+        }
+    }
+    
+    @keyframes shine {
+        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
     }
     
     /* Стили для рекламного баннера */
@@ -351,10 +611,10 @@
         height: 100%;
         border-radius: 50%;
         border: 2px solid transparent;
-        animation: pulse 2s infinite;
+        animation: button-pulse 2s infinite;
     }
 
-    @keyframes pulse {
+    @keyframes button-pulse {
         0% {
             transform: scale(0.95);
             box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
@@ -613,6 +873,40 @@
         <section role="main">
             <div class="products-header">
                 <h1 id="products-title">Каталог якісних товарів для дому, кухні та електроніки — купити в Україні з доставкою</h1>
+                
+                <!-- Полноширинный баннер товаров из Китая на украинском -->
+                <div class="china-wide-banner" onclick="showChinaGoods()" role="banner" aria-label="Баннер товарів з Китаю за найнижчими цінами">
+                    <div class="banner-content">
+                        <h3>
+                            <i class="fas fa-globe-asia icon" aria-hidden="true"></i>
+                            🚀 НАЙНИЖЧІ ЦІНИ НА ТОВАРИ З КИТАЮ 🚀
+                        </h3>
+                        <p>Товари прямо від виробників | Без посередників | Гарантія якості</p>
+                        <p>Швидка доставка по всій Україні | Безпечна оплата при отриманні</p>
+                        <div class="price-tag">ЕКОНОМІЯ ДО 70%</div>
+                    </div>
+                </div>
+                
+                <!-- Уведомление о необходимости уточнения наличия -->
+                <div class="availability-notice" role="alert">
+                    <div class="availability-notice-content">
+                        <div class="availability-text">
+                            <h4><i class="fas fa-info-circle"></i> Важлива інформація для покупців!</h4>
+                            <p>Для уточнення наявності товару на складі, вартості доставки та отримання додаткової інформації, будь ласка, зв'яжіться з нашим менеджером через <strong>WhatsApp</strong> або <strong>Telegram</strong>.</p>
+                            <p>Ми надамо вам актуальну інформацію та допоможемо з оформленням замовлення!</p>
+                        </div>
+                        <div class="availability-links">
+                            <a href="https://wa.me/380684296978" class="availability-link whatsapp" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp
+                            </a>
+                            <a href="https://t.me/Voanarhes" class="availability-link telegram" target="_blank" rel="noopener">
+                                <i class="fab fa-telegram"></i>
+                                Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- Обновленные красивые кнопки с иконками -->
                 <div class="source-tabs" role="tablist">
@@ -1018,6 +1312,42 @@
                 } catch (e) {
                     console.log('Не удалось сохранить состояние баннера в localStorage');
                 }
+            }
+        }
+        
+        // Функция для показа товаров из Китая
+        function showChinaGoods() {
+            // Показать уведомление
+            showNotification('Завантажуємо товари з Китаю за найнижчими цінами...');
+            
+            // Переключиться на все товары (в будущем можно будет переключиться на специальный JSON файл)
+            switchSource('all');
+            
+            // Обновить активную вкладку
+            document.querySelectorAll('.source-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+            });
+            
+            const chinaTab = document.querySelector('.china-wide-banner');
+            if (chinaTab) {
+                chinaTab.classList.add('active');
+                // Можно добавить визуальный эффект активности баннера
+                chinaTab.style.boxShadow = '0 8px 25px rgba(255, 107, 107, 0.8)';
+                chinaTab.style.transform = 'translateY(-5px)';
+                
+                // Через 1 секунду вернуть обычный стиль
+                setTimeout(() => {
+                    chinaTab.style.boxShadow = '0 6px 20px rgba(255, 107, 107, 0.6)';
+                    chinaTab.style.transform = 'translateY(-3px)';
+                }, 1000);
+            }
+            
+            // Активировать первую вкладку "Всі товари"
+            const allTab = document.querySelector('.source-tab[onclick="switchSource(\'all\')"]');
+            if (allTab) {
+                allTab.classList.add('active');
+                allTab.setAttribute('aria-selected', 'true');
             }
         }
         
