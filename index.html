@@ -1048,22 +1048,6 @@
             <div class="products-header">
                 <h1 id="products-title">Каталог якісних товарів для дому, кухні та електроніки — купити в Україні з доставкою</h1>
                 
-                <!-- Полноширинный баннер товаров из Китая на украинском -->
-                <div class="china-wide-banner" onclick="showChinaGoods()" role="banner" aria-label="Баннер товарів з Китаю за найнижчими цінами">
-                    <button class="banner-close-btn" onclick="closeChinaBanner(event)" aria-label="Закрити баннер">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="banner-content">
-                        <h3>
-                            <i class="fas fa-globe-asia icon" aria-hidden="true"></i>
-                            🚀 НАЙНИЖЧІ ЦІНИ НА ТОВАРИ З КИТАЮ 🚀
-                        </h3>
-                        <p>Товари прямо від виробників | Без посередників | Гарантія якості</p>
-                        <p>Швидка доставка по всій Україні | Безпечна оплата при отриманні</p>
-                        <div class="price-tag">ЕКОНОМІЯ ДО 70%</div>
-                    </div>
-                </div>
-                
                 <!-- Уведомление о необходимости уточнения наличия -->
                 <div class="availability-notice" role="alert">
                     <button class="banner-close-btn" onclick="closeAvailabilityNotice(event)" aria-label="Закрити баннер">
@@ -1547,61 +1531,6 @@
             }
         }
         
-        // Функция для показа товаров из Китая
-        function showChinaGoods() {
-            // Показать уведомление
-            showNotification('Завантажуємо товари з Китаю за найнижчими цінами...');
-            
-            // Переключиться на все товары (в будущем можно будет переключиться на специальный JSON файл)
-            switchSource('all');
-            
-            // Обновить активную вкладку
-            document.querySelectorAll('.source-tab').forEach(tab => {
-                tab.classList.remove('active');
-                tab.setAttribute('aria-selected', 'false');
-            });
-            
-            const chinaTab = document.querySelector('.china-wide-banner');
-            if (chinaTab) {
-                chinaTab.classList.add('active');
-                // Можно добавить визуальный эффект активности баннера
-                chinaTab.style.boxShadow = '0 8px 25px rgba(255, 107, 107, 0.8)';
-                chinaTab.style.transform = 'translateY(-5px)';
-                
-                // Через 1 секунду вернуть обычный стиль
-                setTimeout(() => {
-                    chinaTab.style.boxShadow = '0 6px 20px rgba(255, 107, 107, 0.6)';
-                    chinaTab.style.transform = 'translateY(-3px)';
-                }, 1000);
-            }
-            
-            // Активировать первую вкладку "Всі товари"
-            const allTab = document.querySelector('.source-tab[onclick="switchSource(\'all\')"]');
-            if (allTab) {
-                allTab.classList.add('active');
-                allTab.setAttribute('aria-selected', 'true');
-            }
-        }
-        
-        // Функция закрытия баннера товаров из Китая
-        function closeChinaBanner(event) {
-            if (event) {
-                event.stopPropagation(); // Останавливаем всплытие события, чтобы не сработал клик по баннеру
-            }
-            
-            const banner = document.querySelector('.china-wide-banner');
-            if (banner) {
-                banner.style.display = 'none';
-                
-                // Сохраняем в localStorage, что баннер был закрыт
-                try {
-                    localStorage.setItem('chinaBannerClosed', 'true');
-                } catch (e) {
-                    console.log('Не удалось сохранить состояние баннера в localStorage');
-                }
-            }
-        }
-        
         // Функция закрытия баннера условий возврата
         function closeReturnPolicyBanner(event) {
             if (event) {
@@ -1694,19 +1623,6 @@
                 }
             } catch (e) {
                 console.log('Не удалось проверить состояние рекламного баннера в localStorage');
-            }
-            
-            // Проверяем баннер товаров из Китая
-            try {
-                const chinaBannerClosed = localStorage.getItem('chinaBannerClosed');
-                if (chinaBannerClosed === 'true') {
-                    const banner = document.querySelector('.china-wide-banner');
-                    if (banner) {
-                        banner.style.display = 'none';
-                    }
-                }
-            } catch (e) {
-                console.log('Не удалось проверить состояние китайского баннера в localStorage');
             }
             
             // Проверяем уведомление о наличии товара
