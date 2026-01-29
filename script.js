@@ -15,7 +15,7 @@ const EMAILJS_USER_ID = "hYmYimcQ5x5Mu_skB";
 
 // Константа для WhatsApp
 const WHATSAPP_PHONE = "380684296978"; // Замініть на реальний номер
-const WHATSAPP_MESSAGE_PREFIX = "Доброго дня! Хочу зробити швидке замовлення:\n\n";
+const WHATSAPP_MESSAGE_PREFIX = "Доброго дня! Хочу зробити швидке замовлення на GOODSYA UA :\n\n";
 
 // Массив файлів з товарами
 const PRODUCT_FILES = [
