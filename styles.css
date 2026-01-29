@@ -1,30 +1,30 @@
 /* Подключение шрифтов */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap');
 
-/* Обновленная цветовая палитра - ТЕХНИЧЕСКИЕ ТОВАРЫ (Колонки и наушники) */
+/* Обновленная цветовая палитра - КИТАЙСКИЕ ТОВАРЫ */
 :root {
-  --primary: #2C3E50; /* Темно-синий/графитовый - технологии, премиум */
-  --primary-light: #34495E;
-  --primary-dark: #1C2833;
-  --secondary: #9B59B6; /* Фиолетовый - креатив, инновации */
-  --secondary-light: #BB8FCE;
-  --secondary-dark: #7D3C98;
-  --accent: #E74C3C; /* Красный/коралловый - энергия, внимание */
-  --accent-light: #EC7063;
-  --accent-dark: #CB4335;
-  --tech-blue: #3498DB; /* Технологический синий */
-  --tech-green: #2ECC71; /* Зеленый для технологий */
-  --warning: #F39C12; /* Желтый для предупреждений */
-  --danger: #E74C3C; /* Красный для ошибок */
-  --success: #27AE60; /* Зеленый для успеха */
-  --light: #F8F9FA;
-  --dark: #2C3E50;
-  --gray: #7F8C8D;
-  --gray-light: #BDC3C7;
-  --gray-lighter: #ECF0F1;
+  --primary: #C62828; /* Китайский красный - основной цвет */
+  --primary-light: #E53935;
+  --primary-dark: #B71C1C;
+  --secondary: #FF9800; /* Золотой/оранжевый - богатство, успех */
+  --secondary-light: #FFB74D;
+  --secondary-dark: #F57C00;
+  --accent: #2196F3; /* Синий - надежность, технологии */
+  --accent-light: #64B5F6;
+  --accent-dark: #1976D2;
+  --tech-blue: #1565C0; /* Технологический синий */
+  --tech-green: #4CAF50; /* Зеленый для успеха */
+  --warning: #FFC107; /* Желтый для предупреждений */
+  --danger: #F44336; /* Красный для ошибок */
+  --success: #2E7D32; /* Зеленый для успеха */
+  --light: #FFF8F0; /* Светлый кремовый фон */
+  --dark: #212121; /* Темный для текста */
+  --gray: #757575;
+  --gray-light: #BDBDBD;
+  --gray-lighter: #EEEEEE;
   --white: #FFFFFF;
   --surface: #FFFFFF;
-  --surface-2: #F8F9FA;
+  --surface-2: #FFF8F0;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,11 +49,11 @@ body {
   line-height: 1.6;
   color: var(--dark);
   background: linear-gradient(135deg, 
-    #ECF0F1 0%, 
-    #D6EAF8 25%, 
-    #E8DAEF 50%, 
-    #D5F4E6 75%, 
-    #FADBD8 100%);
+    #FFF8F0 0%, 
+    #FFEBEE 25%, 
+    #FFF3E0 50%, 
+    #F3E5F5 75%, 
+    #E8F5E8 100%);
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
@@ -90,14 +90,14 @@ h3 {
   color: var(--primary);
 }
 
-/* Хедер - градиент для технического магазина */
+/* Хедер - градиент для китайского магазина */
 header {
   background: linear-gradient(135deg, 
-    #2C3E50 0%, 
-    #3498DB 25%, 
-    #9B59B6 50%, 
-    #2ECC71 75%, 
-    #E74C3C 100%);
+    #C62828 0%, 
+    #FF9800 25%, 
+    #2196F3 50%, 
+    #4CAF50 75%, 
+    #FFC107 100%);
   color: var(--white);
   padding: 1rem;
   box-shadow: var(--shadow);
@@ -148,7 +148,7 @@ header {
 .search-container-mobile input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
 }
 
 .logo {
@@ -169,7 +169,7 @@ header {
   background: var(--primary-light);
   padding: 0.5rem;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(52, 73, 94, 0.4);
+  box-shadow: 0 0 15px rgba(229, 57, 53, 0.4);
   animation: pulse 2s infinite;
   flex-shrink: 0;
 }
@@ -278,7 +278,7 @@ header {
 .search-container input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
 }
 
 .search-container:focus-within {
@@ -311,7 +311,7 @@ select {
 
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
 }
 
 /* Кнопки */
@@ -391,12 +391,12 @@ select:focus {
 }
 
 .btn-buy {
-  background: linear-gradient(135deg, var(--success) 0%, #27AE60 100%);
+  background: linear-gradient(135deg, var(--success) 0%, #2E7D32 100%);
   color: var(--white);
 }
 
 .btn-buy:hover {
-  background: linear-gradient(135deg, #27AE60 0%, #229954 100%);
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
 }
 
 .btn-favorite {
@@ -413,7 +413,7 @@ select:focus {
 }
 
 .btn-favorite:hover {
-  background: rgba(44, 62, 80, 0.1);
+  background: rgba(198, 40, 40, 0.1);
   color: var(--secondary);
 }
 
@@ -488,7 +488,7 @@ main {
 .filter-group select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
 }
 
 .price-range {
@@ -814,13 +814,13 @@ aside h3 {
   display: block;
 }
 
-/* О магазине - ДЛЯ ТЕХНИЧЕСКОГО МАГАЗИНА */
+/* О магазине - ДЛЯ КИТАЙСКОГО МАГАЗИНА */
 .about-section {
   background: linear-gradient(135deg, #ffffff 0%, var(--gray-lighter) 50%, #ffffff 100%);
-  color: #2C3E50;
+  color: #212121;
   padding: 2.5rem 0;
   margin: 2rem 0;
-  border: 1px solid #D6EAF8;
+  border: 1px solid #FFE0B2;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -848,7 +848,7 @@ aside h3 {
 }
 
 .about-section p {
-  color: #2C3E50;
+  color: #212121;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -861,7 +861,7 @@ aside h3 {
 .about-section li {
   margin-bottom: 0.8rem;
   line-height: 1.6;
-  color: #2C3E50;
+  color: #212121;
 }
 
 .about-section strong {
@@ -880,16 +880,16 @@ aside h3 {
   padding: 1.5rem;
   border-radius: var(--border-radius);
   border-left: 4px solid var(--tech-blue);
-  color: #2C3E50;
+  color: #212121;
   margin: 1.5rem 0;
 }
 
 .about-section .container {
-  color: #2C3E50;
+  color: #212121;
 }
 
 .about-section article {
-  color: #2C3E50;
+  color: #212121;
   margin-bottom: 1.5rem;
 }
 
@@ -1240,7 +1240,7 @@ footer {
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
 }
 
 .form-row {
@@ -1389,27 +1389,27 @@ footer {
 }
 
 .status-new {
-  background: rgba(44, 62, 80, 0.1);
+  background: rgba(198, 40, 40, 0.1);
   color: var(--primary);
 }
 
 .status-processing {
-  background: rgba(243, 156, 18, 0.1);
-  color: #F39C12;
+  background: rgba(255, 193, 7, 0.1);
+  color: #FFC107;
 }
 
 .status-shipped {
-  background: rgba(231, 76, 60, 0.1);
+  background: rgba(33, 150, 243, 0.1);
   color: var(--accent);
 }
 
 .status-delivered {
-  background: rgba(39, 174, 96, 0.1);
-  color: #27AE60;
+  background: rgba(46, 125, 50, 0.1);
+  color: #2E7D32;
 }
 
 .status-cancelled {
-  background: rgba(231, 76, 60, 0.1);
+  background: rgba(244, 67, 54, 0.1);
   color: var(--danger);
 }
 
@@ -1668,7 +1668,7 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* Стили для информации о доставке */
 .delivery-notice {
-  background: rgba(231, 76, 60, 0.1);
+  background: rgba(33, 150, 243, 0.1);
   padding: 1rem;
   border-radius: var(--border-radius);
   margin: 1rem 0;
@@ -2573,12 +2573,12 @@ button:focus, input:focus, select:focus, textarea:focus {
 
 /* Стили для кнопки ТТН */
 .btn-ttn {
-  background: linear-gradient(135deg, var(--tech-blue) 0%, #2980B9 100%);
+  background: linear-gradient(135deg, var(--tech-blue) 0%, #1565C0 100%);
   color: white;
 }
 
 .btn-ttn:hover {
-  background: linear-gradient(135deg, #2980B9 0%, #2471A3 100%);
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
 }
 
 /* Стили для ссылки отслеживания */
@@ -3722,22 +3722,22 @@ main {
 }
 
 .status-processing {
-    background: rgba(243, 156, 18, 0.1);
+    background: rgba(255, 193, 7, 0.1);
     color: var(--warning);
 }
 
 .status-shipped {
-    background: rgba(155, 89, 182, 0.1);
-    color: var(--secondary);
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--accent);
 }
 
 .status-delivered {
-    background: rgba(39, 174, 96, 0.1);
+    background: rgba(46, 125, 50, 0.1);
     color: var(--success);
 }
 
 .status-cancelled {
-    background: rgba(231, 76, 60, 0.1);
+    background: rgba(244, 67, 54, 0.1);
     color: var(--danger);
 }
 
@@ -4331,14 +4331,14 @@ main {
 }
 
 .gender-btn:hover {
-    background: rgba(44, 62, 80, 0.1);
+    background: rgba(198, 40, 40, 0.1);
     transform: translateY(-2px);
 }
 
 .gender-btn.active {
     background: var(--primary);
     color: white;
-    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -4378,14 +4378,14 @@ main {
     background: var(--primary-light);
     color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.2);
+    box-shadow: 0 4px 8px rgba(198, 40, 40, 0.2);
 }
 
 .sport-type-btn.active {
     background: var(--primary);
     color: var(--white);
     border-color: var(--primary);
-    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
 }
 
 /* Адаптивность для фильтра видов спорта */
