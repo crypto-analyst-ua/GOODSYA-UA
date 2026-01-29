@@ -88,7 +88,6 @@
     .contact-info .fa-viber { color: #7360F2; }
     .contact-info .fa-telegram { color: #0088cc; }
     .contact-info .fa-facebook { color: #1877F2; }
-    .contact-info .fa-instagram { color: #E4405F; }
     .contact-info .fa-phone-alt { color: #2ecc71; }
 
     /* Стили для красивых кнопок вкладок */
@@ -221,229 +220,161 @@
         animation: bounce 2s infinite;
     }
 
-    /* Миниатюрные стили для уведомления о наличии товара */
-    .availability-notice {
-        width: 100%;
-        background: linear-gradient(145deg, #e3f2fd, #bbdefb);
-        border-left: 2px solid #2196F3;
-        padding: 6px 8px;
-        margin: 6px 0;
-        border-radius: 0 4px 4px 0;
-        box-shadow: 0 1px 3px rgba(33, 150, 243, 0.1);
-        transition: all 0.3s ease;
-        position: relative;
-        font-size: 11px;
-    }
-
-    .availability-notice-content {
+    /* Стили для микро-баннеров */
+    .micro-banners {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding-right: 20px;
-    }
-
-    .availability-text {
-        flex: 1;
-        min-width: 180px;
-    }
-
-    .availability-text h4 {
-        margin: 0 0 3px 0;
-        color: #1565C0;
-        font-size: 12px;
-        font-weight: 600;
-    }
-
-    .availability-text p {
-        margin: 0;
-        color: #1976D2;
-        font-size: 10px;
-        line-height: 1.2;
-    }
-
-    .availability-text strong {
-        color: #0D47A1;
-    }
-
-    .availability-links {
-        display: flex;
-        gap: 6px;
-        flex-wrap: wrap;
-    }
-
-    .availability-link {
-        display: flex;
-        align-items: center;
-        gap: 3px;
-        padding: 3px 8px;
-        background: white;
-        border-radius: 3px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 10px;
-        transition: all 0.3s ease;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        border: 1px solid transparent;
-    }
-
-    .availability-link.whatsapp {
-        color: #25D366;
-        border-color: #25D366;
-    }
-
-    .availability-link.telegram {
-        color: #0088cc;
-        border-color: #0088cc;
-    }
-
-    .availability-link:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-    }
-
-    .availability-link.whatsapp:hover {
-        background: #25D366;
-        color: white;
-    }
-
-    .availability-link.telegram:hover {
-        background: #0088cc;
-        color: white;
-    }
-
-    .availability-link i {
-        font-size: 16px;
-    }
-
-    /* Миниатюрные стили для баннера условий возврата */
-    .return-policy-banner {
-        width: 100%;
-        background: linear-gradient(145deg, #fff3cd, #ffeaa7);
-        border: 1px solid #ffc107;
-        border-left: 2px solid #ff9800;
-        padding: 6px 8px;
-        margin: 6px 0 8px 0;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px rgba(255, 152, 0, 0.1);
-        transition: all 0.3s ease;
-        font-size: 11px;
-    }
-
-    .return-policy-content {
-        display: flex;
-        align-items: flex-start;
         gap: 8px;
-        position: relative;
-        padding-right: 20px;
+        margin: 8px 0 12px;
+        flex-wrap: wrap;
     }
 
-    .return-policy-icon {
-        flex-shrink: 0;
-        margin-top: 0;
-    }
-
-    .return-policy-icon i {
-        font-size: 14px;
-        color: #ff9800;
-    }
-
-    .return-policy-text {
-        flex: 1;
-    }
-
-    .return-policy-text h4 {
-        margin: 0 0 4px 0;
-        color: #e65100;
-        font-size: 12px;
-        font-weight: 600;
-    }
-
-    .return-policy-text p {
-        margin: 1px 0;
-        color: #bf360c;
-        font-size: 10px;
-        line-height: 1.1;
-    }
-
-    .return-policy-text strong {
-        color: #d84315;
-    }
-
-    .policy-details-link {
-        display: inline-block;
-        margin-top: 4px;
-        color: #1565c0;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 10px;
-        padding: 2px 4px;
-        border-radius: 2px;
-        background: rgba(33, 150, 243, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .policy-details-link:hover {
-        background: rgba(33, 150, 243, 0.2);
-        text-decoration: underline;
-    }
-
-    /* Общие стили для кнопок закрытия баннеров */
-    .banner-close-btn {
-        position: absolute;
-        top: 6px;
-        right: 6px;
-        background: transparent;
-        border: none;
-        color: rgba(0, 0, 0, 0.6);
-        font-size: 12px;
+    .micro-banner {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 500;
         cursor: pointer;
-        width: 20px;
-        height: 20px;
+        transition: all 0.2s ease;
+        position: relative;
+        user-select: none;
+        border: 1px solid transparent;
+        max-width: 140px;
+    }
+
+    .micro-banner:hover {
+        transform: translateY(-1px);
+    }
+
+    .micro-banner i {
+        font-size: 12px;
+    }
+
+    .micro-banner.availability-banner {
+        background: #e3f2fd;
+        color: #1565c0;
+        border-color: #bbdefb;
+    }
+
+    .micro-banner.return-banner {
+        background: #fff3e0;
+        color: #e65100;
+        border-color: #ffcc80;
+    }
+
+    .banner-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Выпадающий контент */
+    .banner-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 5px;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        z-index: 1000;
+        min-width: 180px;
+        display: none;
+        animation: dropdownAppear 0.2s ease;
+    }
+
+    .micro-banner.active .banner-dropdown {
+        display: block;
+    }
+
+    .banner-dropdown p {
+        margin: 0 0 8px 0;
+        font-size: 11px;
+        color: #495057;
+        line-height: 1.3;
+    }
+
+    .micro-links {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .micro-link {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
-        transition: all 0.3s ease;
-        z-index: 10;
-    }
-
-    .banner-close-btn:hover {
-        background: rgba(0, 0, 0, 0.1);
-        color: rgba(0, 0, 0, 0.8);
-        transform: scale(1.1);
-    }
-
-    /* Конкретные цвета для кнопок закрытия в разных баннерах */
-    .china-wide-banner .banner-close-btn {
-        color: rgba(255, 255, 255, 0.8);
-    }
-    
-    .china-wide-banner .banner-close-btn:hover {
-        background: rgba(255, 255, 255, 0.2);
         color: white;
-    }
-    
-    .availability-notice .banner-close-btn {
-        color: #1565C0;
-    }
-    
-    .availability-notice .banner-close-btn:hover {
-        background: rgba(33, 150, 243, 0.1);
-        color: #0D47A1;
-    }
-    
-    .return-policy-banner .banner-close-btn {
-        color: #ff9800;
-    }
-    
-    .return-policy-banner .banner-close-btn:hover {
-        background: rgba(255, 152, 0, 0.1);
-        color: #e65100;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        font-size: 16px;
     }
 
-    /* Адаптивность для мобильных */
+    .micro-link.whatsapp {
+        background: #25d366;
+    }
+
+    .micro-link.telegram {
+        background: #0088cc;
+    }
+
+    .micro-link:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .micro-btn {
+        width: 100%;
+        padding: 6px;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        color: #495057;
+        font-size: 11px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 6px;
+    }
+
+    .micro-btn:hover {
+        background: #e9ecef;
+        border-color: #adb5bd;
+    }
+
+    /* Анимация появления выпадающего меню */
+    @keyframes dropdownAppear {
+        from {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Индикатор активного состояния */
+    .micro-banner.active {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .micro-banner.availability-banner.active {
+        background: #bbdefb;
+    }
+
+    .micro-banner.return-banner.active {
+        background: #ffcc80;
+    }
+
+    /* Адаптация для мобильных */
     @media (max-width: 768px) {
         .source-tabs {
             flex-direction: column;
@@ -484,73 +415,39 @@
             padding-right: 35px;
         }
         
-        .availability-notice {
-            padding: 5px 6px;
-            margin: 4px 0 6px 0;
+        .micro-banners {
+            gap: 6px;
+            margin: 6px 0 10px;
         }
         
-        .availability-notice-content {
-            flex-direction: column;
-            align-items: stretch;
-            padding-right: 18px;
-            gap: 4px;
+        .micro-banner {
+            padding: 3px 8px;
+            font-size: 10px;
+            max-width: 120px;
         }
         
-        .availability-text {
-            min-width: 100%;
-        }
-        
-        .availability-text h4 {
+        .micro-banner i {
             font-size: 11px;
         }
         
-        .availability-text p {
-            font-size: 9px;
+        .banner-dropdown {
+            min-width: 160px;
+            padding: 8px;
         }
         
-        .availability-links {
-            justify-content: center;
-            gap: 4px;
+        .banner-dropdown p {
+            font-size: 10px;
         }
         
-        .availability-link {
-            flex: 1;
-            justify-content: center;
-            min-width: 80px;
-            padding: 2px 6px;
-            font-size: 9px;
-        }
-        
-        .availability-link i {
+        .micro-link {
+            width: 28px;
+            height: 28px;
             font-size: 14px;
         }
         
-        .return-policy-banner {
-            padding: 5px 6px;
-            margin: 4px 0 6px 0;
-        }
-        
-        .return-policy-content {
-            flex-direction: column;
-            gap: 6px;
-            padding-right: 18px;
-        }
-        
-        .return-policy-icon {
-            align-self: flex-start;
-        }
-        
-        .return-policy-text h4 {
-            font-size: 11px;
-        }
-        
-        .return-policy-text p {
-            font-size: 9px;
-        }
-        
-        .policy-details-link {
-            font-size: 9px;
-            padding: 1px 3px;
+        .micro-btn {
+            padding: 5px;
+            font-size: 10px;
         }
     }
 
@@ -575,39 +472,12 @@
             padding-right: 30px;
         }
         
-        .availability-notice-content {
-            padding-right: 16px;
-        }
-        
-        .availability-links {
-            flex-direction: column;
-            width: 100%;
-        }
-        
-        .availability-link {
-            width: 100%;
-            justify-content: center;
-        }
-        
-        .return-policy-content {
-            padding-right: 16px;
-        }
-        
-        .return-policy-text h4 {
-            font-size: 11px;
-            padding-right: 16px;
-        }
-        
-        .policy-details-link {
-            font-size: 9px;
-        }
-        
-        .banner-close-btn {
-            width: 18px;
-            height: 18px;
+        .banner-dropdown p {
             font-size: 10px;
-            top: 4px;
-            right: 4px;
+        }
+        
+        .micro-btn {
+            font-size: 10px;
         }
     }
     
@@ -812,6 +682,103 @@
             box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
         }
     }
+
+    /* Стили для кнопки "Вернуться наверх" */
+    .back-to-top {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: #4CAF50;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+        z-index: 999;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+
+    .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .back-to-top:hover {
+        background-color: #2E8B57;
+        transform: scale(1.1);
+        box-shadow: 0 6px 18px rgba(46, 139, 87, 0.6);
+    }
+
+    .back-to-top:active {
+        transform: scale(0.95);
+    }
+
+    .back-to-top i {
+        color: white;
+        font-size: 22px;
+    }
+
+    /* Адаптация для мобильных устройств */
+    @media (max-width: 768px) {
+        .back-to-top {
+            bottom: 90px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+        }
+        
+        .back-to-top i {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .back-to-top {
+            bottom: 80px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .back-to-top i {
+            font-size: 18px;
+        }
+    }
+
+    /* Анимация пульсации для привлечения внимания */
+    .back-to-top::after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 50%;
+        border: 2px solid rgba(76, 175, 80, 0.3);
+        animation: topButtonPulse 2s infinite;
+    }
+
+    @keyframes topButtonPulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.7;
+        }
+        70% {
+            transform: scale(1.2);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
 </style>
 
     <!-- Объединенная JSON-LD Schema для GOODSYA UA -->
@@ -838,8 +805,7 @@
                         "availableLanguage": ["uk", "ru"]
                     },
                     "sameAs": [
-                        "https://www.facebook.com/share/1AojRpZmZg/",
-                        "https://www.instagram.com/goodsyaua"
+                        "https://www.facebook.com/share/1AojRpZmZg/"
                     ]
                 },
                 {
@@ -1048,68 +1014,37 @@
             <div class="products-header">
                 <h1 id="products-title">Каталог якісних товарів для дому, кухні та електроніки — купити в Україні з доставкою</h1>
                 
-                <!-- Уведомление о необходимости уточнения наличия -->
-                <div class="availability-notice" role="alert">
-                    <button class="banner-close-btn" onclick="closeAvailabilityNotice(event)" aria-label="Закрити баннер">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="availability-notice-content">
-                        <div class="availability-text">
-                            <h4><i class="fas fa-info-circle"></i> Важлива інформація для покупців!</h4>
-                            <p>Для уточнення наявності товару на складі, вартості доставки та отримання додаткової інформації, будь ласка, зв'яжіться з нашим менеджером через <strong>WhatsApp</strong> або <strong>Telegram</strong>.</p>
-                            <p>Ми надамо вам актуальну інформацію та допоможемо з оформленням замовлення!</p>
-                        </div>
-                        <div class="availability-links">
-                            <a href="https://wa.me/380684296978" class="availability-link whatsapp" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp"></i>
-                                WhatsApp
-                            </a>
-                            <a href="https://t.me/Voanarhes" class="availability-link telegram" target="_blank" rel="noopener">
-                                <i class="fab fa-telegram"></i>
-                                Telegram
-                            </a>
+                <!-- Микро-баннеры -->
+                <div class="micro-banners">
+                    <!-- Баннер уточнения наличия -->
+                    <div class="micro-banner availability-banner" onclick="toggleMicroBanner('availability')" role="button" tabindex="0">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="banner-text">Уточнить наличие</span>
+                        <div class="banner-dropdown">
+                            <p>Напишите менеджеру для подтверждения:</p>
+                            <div class="micro-links">
+                                <a href="https://wa.me/380684296978" target="_blank" class="micro-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://t.me/Voanarhes" target="_blank" class="micro-link telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Баннер с условиями возврата -->
-                <div class="return-policy-banner" id="return-policy-banner" role="alert">
-                    <button class="banner-close-btn" onclick="closeReturnPolicyBanner(event)" aria-label="Закрити баннер">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    <div class="return-policy-content">
-                        <div class="return-policy-icon">
-                            <i class="fas fa-exclamation-circle"></i>
-                        </div>
-                        <div class="return-policy-text">
-                            <h4><i class="fas fa-info-circle"></i> Важливо! Умови повернення та обміну товару</h4>
-                            <p><strong>Обмін або повернення коштів можливий лише в день отримання замовлення!</strong></p>
-                            <p>• При виявленні браку - негайно повідомте нас з фотофіксацією</p>
-                            <p>• Після використання товару повернення неможливе</p>
-                            <p>• Пошкодження при доставці - відмовляйтесь на відділенні</p>
-                            <a href="#" onclick="openReturnPolicyDetails(); return false;" class="policy-details-link">
-                                Детальніше про умови повернення
-                            </a>
+                    
+                    <!-- Баннер условий возврата -->
+                    <div class="micro-banner return-banner" onclick="toggleMicroBanner('return')" role="button" tabindex="0">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span class="banner-text">Условия возврата</span>
+                        <div class="banner-dropdown">
+                            <p>Повернення лише в день отримання. При браку — негайно з фото.</p>
+                            <button class="micro-btn" onclick="openReturnPolicyDetails(); event.stopPropagation();">Детальніше</button>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Обновленные красивые кнопки с иконками -->
-                <div class="source-tabs" role="tablist">
-                    <button class="source-tab active" role="tab" onclick="switchSource('all')" aria-selected="true">
-                        <i class="fas fa-store" aria-hidden="true"></i>
-                        <span class="tab-text">Всі товари</span>
-                    </button>
-                    <button class="source-tab" role="tab" onclick="switchSource('home_goods.json')" aria-selected="false">
-                        <i class="fas fa-home" aria-hidden="true"></i>
-                        <span class="tab-text">Товари для дому</span>
-                    </button>
-                    <button class="source-tab" role="tab" onclick="switchSource('electronics.json')" aria-selected="false">
-                        <i class="fas fa-laptop" aria-hidden="true"></i>
-                        <span class="tab-text">Електроніка</span>
-                    </button>
-                </div>
-                
                 <div class="products-info">
                     <span id="products-count" aria-live="polite"></span>
                     <div class="view-options">
@@ -1369,7 +1304,6 @@
                 <div><i class="fab fa-viber" aria-hidden="true"></i> <a href="viber://chat?number=+380684296978" target="_blank" rel="noopener">Viber</a></div>
                 <div><i class="fab fa-telegram" aria-hidden="true"></i> <a href="https://t.me/Voanarhes" target="_blank" rel="noopener">Telegram</a></div>
                 <div><i class="fab fa-facebook" aria-hidden="true"></i> <a href="https://www.facebook.com/share/1AojRpZmZg/" target="_blank" rel="noopener">Facebook</a></div>
-                <div><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/goodsyaua" target="_blank" rel="noopener">Instagram</a></div>
             </div>
         </div>
         
@@ -1513,66 +1447,83 @@
         <i class="fab fa-telegram" aria-hidden="true"></i>
     </a>
 
+    <!-- Кнопка "Вернуться наверх" -->
+    <button class="back-to-top" id="backToTop" aria-label="Повернутися нагору" title="Наверх">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
     <!-- Добавьте этот скрипт перед вашим script.js -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
     <script>
-        // Функция для закрытия рекламного баннера
-        function closeAdBanner() {
-            const banner = document.getElementById('ad-banner');
-            if (banner) {
-                banner.style.display = 'none';
-                
-                // Сохраняем состояние в localStorage, чтобы баннер не показывался снова
-                try {
-                    localStorage.setItem('adBannerClosed', 'true');
-                } catch (e) {
-                    console.log('Не удалось сохранить состояние баннера в localStorage');
-                }
-            }
-        }
-        
-        // Функция закрытия баннера условий возврата
-        function closeReturnPolicyBanner(event) {
-            if (event) {
-                event.stopPropagation();
-            }
+        // Функции для микро-баннеров
+        let activeMicroBanner = null;
+
+        function toggleMicroBanner(type) {
+            const banner = document.querySelector(`.micro-banner.${type}-banner`);
             
-            const banner = document.getElementById('return-policy-banner');
-            if (banner) {
-                banner.style.display = 'none';
-                
-                // Сохраняем в localStorage, что баннер был закрыт
-                try {
-                    localStorage.setItem('returnPolicyBannerClosed', 'true');
-                } catch (e) {
-                    console.log('Не удалось сохранить состояние баннера в localStorage');
+            // Закрываем все баннеры
+            document.querySelectorAll('.micro-banner').forEach(b => {
+                if (b !== banner) {
+                    b.classList.remove('active');
                 }
+            });
+            
+            // Переключаем текущий баннер
+            banner.classList.toggle('active');
+            
+            if (banner.classList.contains('active')) {
+                activeMicroBanner = banner;
+                
+                // Автоматическое скрытие через 5 секунд
+                setTimeout(() => {
+                    if (banner.classList.contains('active')) {
+                        banner.classList.remove('active');
+                        activeMicroBanner = null;
+                    }
+                }, 5000);
+            } else {
+                activeMicroBanner = null;
             }
         }
 
-        // Функция закрытия уведомления о наличии товара
-        function closeAvailabilityNotice(event) {
-            if (event) {
-                event.stopPropagation();
+        // Закрытие по клику вне баннера
+        document.addEventListener('click', function(e) {
+            if (activeMicroBanner && !activeMicroBanner.contains(e.target)) {
+                activeMicroBanner.classList.remove('active');
+                activeMicroBanner = null;
             }
-            
-            const banner = document.querySelector('.availability-notice');
-            if (banner) {
-                banner.style.display = 'none';
-                
-                // Сохраняем в localStorage, что баннер был закрыт
-                try {
-                    localStorage.setItem('availabilityNoticeClosed', 'true');
-                } catch (e) {
-                    console.log('Не удалось сохранить состояние баннера в localStorage');
+        });
+
+        // Закрытие по Esc
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && activeMicroBanner) {
+                activeMicroBanner.classList.remove('active');
+                activeMicroBanner = null;
+            }
+        });
+
+        // Для сенсорных устройств
+        let touchStartTime;
+        document.addEventListener('touchstart', function(e) {
+            touchStartTime = Date.now();
+        });
+
+        document.addEventListener('touchend', function(e) {
+            if (Date.now() - touchStartTime > 500) {
+                // Долгое нажатие
+                if (activeMicroBanner) {
+                    activeMicroBanner.classList.remove('active');
+                    activeMicroBanner = null;
                 }
             }
-        }
+        });
 
         // Функция открытия детальной информации об условиях возврата
         function openReturnPolicyDetails() {
             // Прокрутка к разделу правил
-            showNotification('Прокручуємо до розділу з умовами повернення...');
+            if (typeof showNotification === 'function') {
+                showNotification('Відкриваємо детальну інформацію...');
+            }
             
             // Открываем модальное окно с правилами
             openRules();
@@ -1597,20 +1548,102 @@
             }, 500);
         }
 
-        // При загрузке страницы проверяем, был ли баннер закрыт ранее
-        document.addEventListener('DOMContentLoaded', function() {
-            // Проверяем баннер условий возврата
-            try {
-                const returnPolicyBannerClosed = localStorage.getItem('returnPolicyBannerClosed');
-                if (returnPolicyBannerClosed === 'true') {
-                    const banner = document.getElementById('return-policy-banner');
-                    if (banner) {
-                        banner.style.display = 'none';
-                    }
+        // Функция для закрытия рекламного баннера
+        function closeAdBanner() {
+            const banner = document.getElementById('ad-banner');
+            if (banner) {
+                banner.style.display = 'none';
+                
+                // Сохраняем состояние в localStorage, чтобы баннер не показывался снова
+                try {
+                    localStorage.setItem('adBannerClosed', 'true');
+                } catch (e) {
+                    console.log('Не удалось сохранить состояние баннера в localStorage');
                 }
-            } catch (e) {
-                console.log('Не удалось проверить состояние баннера в localStorage');
             }
+        }
+
+        // Функция для кнопки "Вернуться наверх"
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            // Показываем/скрываем кнопку при прокрутке
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            // Плавная прокрутка наверх при клике
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                
+                // Фокус на заголовке для доступности
+                setTimeout(() => {
+                    const mainHeading = document.querySelector('h1');
+                    if (mainHeading) {
+                        mainHeading.focus();
+                        mainHeading.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }, 500);
+            });
+            
+            // Также можно прокручивать наверх по клавише Home
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Home') {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // Анимация появления кнопки при первом появлении
+            setTimeout(() => {
+                if (window.pageYOffset > 300 && !backToTopButton.classList.contains('visible')) {
+                    backToTopButton.classList.add('visible');
+                    // Временная подсветка
+                    backToTopButton.style.boxShadow = '0 0 20px rgba(76, 175, 80, 0.8)';
+                    setTimeout(() => {
+                        backToTopButton.style.boxShadow = '';
+                    }, 2000);
+                }
+            }, 1000);
+        });
+
+        // При загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            // Показываем подсказку при первом посещении
+            const isFirstVisit = !localStorage.getItem('microBannerHintShown');
+            
+            if (isFirstVisit) {
+                setTimeout(() => {
+                    if (typeof showNotification === 'function') {
+                        showNotification('ℹ️ Натисніть на плашки для додаткової інформації');
+                    }
+                    localStorage.setItem('microBannerHintShown', 'true');
+                }, 2000);
+            }
+            
+            // Анимация появления баннеров
+            const banners = document.querySelectorAll('.micro-banner');
+            banners.forEach((banner, index) => {
+                banner.style.opacity = '0';
+                banner.style.transform = 'translateY(-5px)';
+                
+                setTimeout(() => {
+                    banner.style.transition = 'all 0.3s ease';
+                    banner.style.opacity = '1';
+                    banner.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
             
             // Проверяем рекламный баннер
             try {
@@ -1624,53 +1657,6 @@
             } catch (e) {
                 console.log('Не удалось проверить состояние рекламного баннера в localStorage');
             }
-            
-            // Проверяем уведомление о наличии товара
-            try {
-                const availabilityNoticeClosed = localStorage.getItem('availabilityNoticeClosed');
-                if (availabilityNoticeClosed === 'true') {
-                    const banner = document.querySelector('.availability-notice');
-                    if (banner) {
-                        banner.style.display = 'none';
-                    }
-                }
-            } catch (e) {
-                console.log('Не удалось проверить состояние уведомления о наличии в localStorage');
-            }
-            
-            // Также можно показывать баннер при добавлении товара в корзину
-            // Добавим слушатель на все кнопки "Добавить в корзину" (когда они появятся)
-            // Это нужно делать после загрузки товаров, поэтому используем setTimeout или наблюдатель
-            setTimeout(() => {
-                // Находим все кнопки добавления в корзину
-                const addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
-                addToCartButtons.forEach(button => {
-                    button.addEventListener('click', function() {
-                        // Показываем баннер, если он был скрыт
-                        const banner = document.getElementById('return-policy-banner');
-                        if (banner && banner.style.display === 'none') {
-                            banner.style.display = 'block';
-                            // Анимированное появление
-                            banner.style.opacity = '0';
-                            banner.style.transform = 'translateY(-10px)';
-                            
-                            let opacity = 0;
-                            let pos = -10;
-                            const animate = () => {
-                                opacity += 0.05;
-                                pos += 0.5;
-                                banner.style.opacity = opacity;
-                                banner.style.transform = `translateY(${pos}px)`;
-                                
-                                if (opacity < 1) {
-                                    requestAnimationFrame(animate);
-                                }
-                            };
-                            animate();
-                        }
-                    });
-                });
-            }, 2000); // Даем время на загрузку товаров
         });
     </script>
     <script src="script.js"></script>
