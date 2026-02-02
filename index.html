@@ -2,7 +2,7 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Інтернет-магазин якісних товарів для дому, кухні та електроніки</title>
+    <title>Інтернет-магазин якісних товарів для дому, кухні та електроніки | GOODSYA UA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
@@ -58,7 +58,7 @@
         display: block;
     }
     
-    /* Стили для компактних контактів у футері */
+    /* Стили для компактных контактов в футере */
     .contact-info.compact {
         margin: 10px 0;
         padding: 0;
@@ -105,7 +105,7 @@
         transform: scale(1.15);
     }
 
-    /* Іконки месенджерів з фонами */
+    /* Иконки мессенджеров с фонами */
     .contact-info.compact .fa-whatsapp { 
         color: #25D366 !important; 
     }
@@ -126,7 +126,7 @@
         color: #2ecc71 !important; 
     }
 
-    /* Рядок з телефоном */
+    /* Строка с телефоном */
     .contact-info.compact .phone-row {
         margin-top: 12px;
         padding-top: 10px;
@@ -159,7 +159,7 @@
         color: #4CAF50;
     }
 
-    /* Адаптація для мобільних */
+    /* Адаптация для мобильных */
     @media (max-width: 768px) {
         .contact-info.compact .contact-row {
             gap: 12px;
@@ -202,7 +202,7 @@
         }
     }
     
-    /* Стилі для красивих кнопок вкладок */
+    /* Стили для красивых кнопок вкладок */
     .source-tabs {
         display: flex;
         gap: 10px;
@@ -253,7 +253,7 @@
         white-space: nowrap;
     }
 
-    /* Стилі для повноширинного баннера товарів з Китаю */
+    /* Стили для полноширинного баннера товаров из Китая */
     .china-wide-banner {
         width: 100%;
         background: linear-gradient(145deg, #ff6b6b, #ff8e53, #ff6b6b);
@@ -278,7 +278,7 @@
     .china-wide-banner .banner-content {
         position: relative;
         z-index: 2;
-        padding-right: 40px; /* Місце для кнопки закриття */
+        padding-right: 40px; /* Место для кнопки закрытия */
     }
 
     .china-wide-banner h3 {
@@ -332,7 +332,35 @@
         animation: bounce 2s infinite;
     }
 
-    /* Стилі для мікро-баннерів */
+    /* Стили для микро-баннеров -->
+    <div class="micro-banners">
+        <!-- Баннер уточнения наличия -->
+        <div class="micro-banner availability-banner" onclick="toggleMicroBanner('availability')" role="button" tabindex="0">
+            <i class="fas fa-question-circle"></i>
+            <span class="banner-text">Уточнити наявність</span>
+            <div class="banner-dropdown">
+                <p>Напишіть менеджеру для підтвердження:</p>
+                <div class="micro-links">
+                    <a href="https://wa.me/380684296978" target="_blank" class="micro-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/Voanarhes" target="_blank" class="micro-link telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Баннер условий возврата -->
+        <div class="micro-banner return-banner" onclick="toggleMicroBanner('return')" role="button" tabindex="0">
+            <i class="fas fa-exclamation-circle"></i>
+            <span class="banner-text">Умови повернення</span>
+            <div class="banner-dropdown">
+                <p>Повернення лише в день отримання. При браку — негайно з фото.</p>
+                <button class="micro-btn" onclick="openReturnPolicyDetails(); event.stopPropagation();">Детальніше</button>
+            </div>
+        </div>
+    </div> */
     .micro-banners {
         display: flex;
         gap: 8px;
@@ -382,7 +410,7 @@
         text-overflow: ellipsis;
     }
 
-    /* Випадаючий контент */
+    /* Выпадающий контент */
     .banner-dropdown {
         position: absolute;
         top: 100%;
@@ -461,7 +489,7 @@
         border-color: #adb5bd;
     }
 
-    /* Анімація появи випадаючого меню */
+    /* Анимация появления выпадающего меню */
     @keyframes dropdownAppear {
         from {
             opacity: 0;
@@ -473,7 +501,7 @@
         }
     }
 
-    /* Індикатор активного стану */
+    /* Индикатор активного состояния */
     .micro-banner.active {
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
@@ -486,7 +514,7 @@
         background: #ffcc80;
     }
 
-    /* Адаптація для мобільних */
+    /* Адаптация для мобильных */
     @media (max-width: 768px) {
         .source-tabs {
             flex-direction: column;
@@ -609,7 +637,7 @@
         100% { transform: scale(1); }
     }
     
-    /* Стилі для рекламного баннера */
+    /* Стили для рекламного баннера */
     .ad-banner-container {
         width: 100%;
         overflow: hidden;
@@ -627,7 +655,7 @@
         object-fit: contain;
     }
 
-    /* Кнопка закриття рекламного баннера (вже існує) */
+    /* Кнопка закрытия рекламного баннера (уже существует) */
     .ad-banner-container .banner-close-btn {
         background-color: rgba(0, 0, 0, 0.6);
         color: white;
@@ -643,7 +671,7 @@
         transform: scale(0.95);
     }
 
-    /* Для мобільних пристроїв */
+    /* Для мобильных устройств */
     @media (max-width: 768px) {
         .full-width-banner {
             min-height: 150px;
@@ -651,10 +679,10 @@
         }
     }
     
-    /* Стилі для плаваючої кнопки WhatsApp */
+    /* Стили для плавающей кнопки WhatsApp */
     .whatsapp-float {
         position: fixed;
-        bottom: 100px; /* Вище кнопки "Вгору" */
+        bottom: 100px; /* Выше кнопки "Наверх" */
         right: 30px;
         width: 60px;
         height: 60px;
@@ -684,10 +712,10 @@
         font-size: 34px;
     }
 
-    /* Стилі для плаваючої кнопки Telegram */
+    /* Стили для плавающей кнопки Telegram */
     .telegram-float {
         position: fixed;
-        bottom: 30px; /* Нижня права позиція */
+        bottom: 30px; /* Нижняя правая позиция */
         right: 30px;
         width: 60px;
         height: 60px;
@@ -717,10 +745,10 @@
         font-size: 34px;
     }
 
-    /* Стилі для кнопки "Повернутися вгору" */
+    /* Стили для кнопки "Вернуться наверх" */
     .back-to-top {
         position: fixed;
-        bottom: 30px; /* Нижня ліва позиція */
+        bottom: 30px; /* Нижняя левая позиция */
         left: 30px;
         width: 50px;
         height: 50px;
@@ -759,7 +787,7 @@
         font-size: 22px;
     }
 
-    /* Анімації для кнопок */
+    /* Анимации для кнопок */
     .whatsapp-float::after,
     .telegram-float::after {
         content: '';
@@ -788,7 +816,7 @@
         }
     }
 
-    /* Анімація пульсації для привернення уваги */
+    /* Анимация пульсации для привлечения внимания */
     .back-to-top::after {
         content: '';
         position: absolute;
@@ -816,12 +844,12 @@
         }
     }
 
-    /* Адаптація для мобільних пристроїв */
+    /* Адаптация для мобильных устройств */
     @media (max-width: 768px) {
         .whatsapp-float {
             width: 55px;
             height: 55px;
-            bottom: 90px; /* Вище кнопки Telegram */
+            bottom: 90px; /* Выше кнопки Telegram */
             right: 20px;
         }
         
@@ -832,7 +860,7 @@
         .telegram-float {
             width: 55px;
             height: 55px;
-            bottom: 25px; /* Низ правої частини */
+            bottom: 25px; /* Низ правой части */
             right: 20px;
         }
         
@@ -841,7 +869,7 @@
         }
         
         .back-to-top {
-            bottom: 25px; /* Низ лівої частини */
+            bottom: 25px; /* Низ левой части */
             left: 20px;
             width: 45px;
             height: 45px;
@@ -888,7 +916,7 @@
     }
 </style>
 
-    <!-- Об'єднана JSON-LD Schema для GOODSYA UA -->
+    <!-- Объединенная JSON-LD Schema для GOODSYA UA -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -977,7 +1005,7 @@
                 </h1>
             </div>
             <div class="header-controls">
-                <!-- Кнопка-бургер для мобільних фільтрів -->
+                <!-- Кнопка-бургер для мобильных фильтров -->
                 <button onclick="toggleMobileFilters()" class="btn btn-mobile-filters" aria-label="Фільтри товарів">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -1030,7 +1058,7 @@
             </div>
         </div>
         
-        <!-- Пошук для мобільних пристроїв -->
+        <!-- Поиск для мобильных устройств -->
         <div class="search-container-mobile">
             <i class="fas fa-search search-icon" aria-hidden="true"></i>
             <input type="text" id="search-mobile" placeholder="Пошук якісних товарів для дому..." aria-label="Пошук товарів по каталогу">
@@ -1038,7 +1066,7 @@
         </div>
     </header>
 
-    <!-- Контейнер для баннера безпеки -->
+    <!-- Контейнер для баннера безопасности -->
     <div id="security-banner-container" style="display: none;"></div>
 
     <!-- Breadcrumb Navigation -->
@@ -1050,7 +1078,7 @@
             <i class="fas fa-filter"></i> Фільтри
         </button>
         
-        <!-- Десктопна версія фільтрів -->
+        <!-- Десктопная версия фильтров -->
         <aside class="filters desktop-filters" id="filters" role="complementary">
             <h3>Фільтри товарів</h3>
             <div class="filter-group">
@@ -1100,7 +1128,7 @@
             <div class="filter-group">
                 <label>Категорії товарів</label>
                 <div class="categories-list" id="categories-list">
-                    <!-- Категорії з JavaScript -->
+                    <!-- Категории из JavaScript -->
                     <div class="category-item active" onclick="selectCategory('')">Всі категорії</div>
                     <div class="category-item" onclick="selectCategory('Все для кухні')">Все для кухні</div>
                     <div class="category-item" onclick="selectCategory('Красота і здоров\'я')">Красота і здоров'я</div>
@@ -1151,7 +1179,7 @@
                     </div>
                 </div>
                 
-                <!-- Оновлені красиві кнопки з іконками -->
+                <!-- Обновленные красивые кнопки с иконками -->
                 <div class="products-info">
                     <span id="products-count" aria-live="polite"></span>
                     <div class="view-options">
@@ -1174,14 +1202,14 @@
             </div>
             
             <nav class="pagination" id="pagination" role="navigation" aria-label="Навігація по сторінках каталогу">
-                <!-- Пагінація буде генеруватися динамічно -->
+                <!-- Пагинация будет генерироваться динамически -->
             </nav>
         </section>
 
         <aside role="complementary">
             <h3>Популярні товари</h3>
             <div class="featured-products" id="featured-products">
-                <!-- Буде заповнено динамічно -->
+                <!-- Будет заполнено динамически -->
             </div>
             
             <div id="admin-panel" class="admin-panel" style="display:none;">
@@ -1304,7 +1332,7 @@
     </div>
 </div>
 
-    <!-- Мобільна версія фільтрів -->
+    <!-- Мобильная версия фильтров -->
     <div id="mobile-filters" class="mobile-filters-overlay">
         <div class="mobile-filters-content">
             <div class="mobile-filters-header">
@@ -1362,7 +1390,7 @@
                 <div class="filter-group">
                     <label>Категорії товарів</label>
                     <div class="categories-list" id="mobile-categories-list">
-                        <!-- Категорії з JavaScript -->
+                        <!-- Категории из JavaScript -->
                         <div class="category-item active" onclick="selectMobileCategory('')">Всі категорії</div>
                         <div class="category-item" onclick="selectMobileCategory('Все для кухні')">Все для кухні</div>
                         <div class="category-item" onclick="selectMobileCategory('Красота і здоров\'я')">Красота і здоров'я</div>
@@ -1381,7 +1409,7 @@
         </div>
     </div>
 
-    <!-- Лічильник переглядів (тільки для адміністраторів) -->
+    <!-- Лічильник переглядів (только для адміністраторів) -->
     <div id="page-views-container" style="display: none; text-align: center; margin-top: 10px;">
         <img id="page-views" alt="Page Views" style="display: block; margin: 10px auto;"/>
     </div>
@@ -1393,7 +1421,7 @@
             <a href="politics.html" target="_blank" style="display: block; margin-top: 5px;">Політика конфіденційності</a>
         </div>
         
-        <!-- Розділ з доставкою та оплатою -->
+        <!-- Раздел с доставкой и оплатой -->
         <div class="footer-section">
             <h4>Доставка та оплата</h4>
             <div class="delivery-info">
@@ -1440,7 +1468,7 @@
         </div>
     </div>
 
-    <!-- Модальне вікно для правил GOODSYA UA -->
+    <!-- Модальное окно для правил GOODSYA UA -->
     <div id="rules-modal" class="modal">
         <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
             <button class="modal-close" onclick="closeRulesModal()" aria-label="Закрити"><i class="fas fa-times" aria-hidden="true"></i></button>
@@ -1549,7 +1577,7 @@
         <span id="notification-text"></span>
     </div>
 
-    <!-- Плаваюча кнопка WhatsApp -->
+    <!-- Плавающая кнопка WhatsApp -->
     <a href="https://wa.me/380684296978" 
        class="whatsapp-float" 
        target="_blank" 
@@ -1559,7 +1587,7 @@
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <!-- Плаваюча кнопка Telegram -->
+    <!-- Плавающая кнопка Telegram -->
     <a href="https://t.me/Voanarhes" 
        class="telegram-float" 
        target="_blank" 
@@ -1569,34 +1597,34 @@
         <i class="fab fa-telegram" aria-hidden="true"></i>
     </a>
 
-    <!-- Кнопка "Повернутися вгору" -->
-    <button class="back-to-top" id="backToTop" aria-label="Повернутися нагору" title="Вгору">
+    <!-- Кнопка "Вернуться наверх" -->
+    <button class="back-to-top" id="backToTop" aria-label="Повернутися нагору" title="Наверх">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- Додайте цей скрипт перед вашим script.js -->
+    <!-- Добавьте этот скрипт перед вашим script.js -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
     <script>
-        // Функції для мікро-баннерів
+        // Функции для микро-баннеров
         let activeMicroBanner = null;
 
         function toggleMicroBanner(type) {
             const banner = document.querySelector(`.micro-banner.${type}-banner`);
             
-            // Закриваємо всі баннери
+            // Закрываем все баннеры
             document.querySelectorAll('.micro-banner').forEach(b => {
                 if (b !== banner) {
                     b.classList.remove('active');
                 }
             });
             
-            // Переключаємо поточний баннер
+            // Переключаем текущий баннер
             banner.classList.toggle('active');
             
             if (banner.classList.contains('active')) {
                 activeMicroBanner = banner;
                 
-                // Автоматичне приховування через 5 секунд
+                // Автоматическое скрытие через 5 секунд
                 setTimeout(() => {
                     if (banner.classList.contains('active')) {
                         banner.classList.remove('active');
@@ -1608,7 +1636,7 @@
             }
         }
 
-        // Закриття по кліку поза баннером
+        // Закрытие по клику вне баннера
         document.addEventListener('click', function(e) {
             if (activeMicroBanner && !activeMicroBanner.contains(e.target)) {
                 activeMicroBanner.classList.remove('active');
@@ -1616,7 +1644,7 @@
             }
         });
 
-        // Закриття по Esc
+        // Закрытие по Esc
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && activeMicroBanner) {
                 activeMicroBanner.classList.remove('active');
@@ -1624,7 +1652,7 @@
             }
         });
 
-        // Для сенсорних пристроїв
+        // Для сенсорных устройств
         let touchStartTime;
         document.addEventListener('touchstart', function(e) {
             touchStartTime = Date.now();
@@ -1632,7 +1660,7 @@
 
         document.addEventListener('touchend', function(e) {
             if (Date.now() - touchStartTime > 500) {
-                // Довге натискання
+                // Долгое нажатие
                 if (activeMicroBanner) {
                     activeMicroBanner.classList.remove('active');
                     activeMicroBanner = null;
@@ -1640,22 +1668,22 @@
             }
         });
 
-        // Функція відкриття детальної інформації про умови повернення
+        // Функция открытия детальной информации об условиях возврата
         function openReturnPolicyDetails() {
-            // Прокрутка до розділу правил
+            // Прокрутка к разделу правил
             if (typeof showNotification === 'function') {
                 showNotification('Відкриваємо детальну інформацію...');
             }
             
-            // Відкриваємо модальне вікно з правилами
+            // Открываем модальное окно с правилами
             openRules();
             
-            // Прокрутка до розділу гарантії і повернення всередині модального вікна
+            // Прокрутка к разделу гарантии и возврата внутри модального окна
             setTimeout(() => {
                 const warrantySection = document.querySelector('#warranty_return');
                 if (warrantySection) {
                     warrantySection.scrollIntoView({ behavior: 'smooth' });
-                    // Підсвітка розділу
+                    // Подсветка раздела
                     warrantySection.style.backgroundColor = 'rgba(255, 245, 157, 0.3)';
                     warrantySection.style.padding = '15px';
                     warrantySection.style.borderRadius = '5px';
@@ -1670,26 +1698,26 @@
             }, 500);
         }
 
-        // Функція для закриття рекламного баннера
+        // Функция для закрытия рекламного баннера
         function closeAdBanner() {
             const banner = document.getElementById('ad-banner');
             if (banner) {
                 banner.style.display = 'none';
                 
-                // Зберігаємо стан в localStorage, щоб баннер не показувався знову
+                // Сохраняем состояние в localStorage, чтобы баннер не показывался снова
                 try {
                     localStorage.setItem('adBannerClosed', 'true');
                 } catch (e) {
-                    console.log('Не вдалося зберегти стан баннера в localStorage');
+                    console.log('Не удалось сохранить состояние баннера в localStorage');
                 }
             }
         }
 
-        // Функція для кнопки "Повернутися вгору"
+        // Функция для кнопки "Вернуться наверх"
         document.addEventListener('DOMContentLoaded', function() {
             const backToTopButton = document.getElementById('backToTop');
             
-            // Показуємо/приховуємо кнопку при прокрутці
+            // Показываем/скрываем кнопку при прокрутке
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 300) {
                     backToTopButton.classList.add('visible');
@@ -1698,7 +1726,7 @@
                 }
             });
             
-            // Плавна прокрутка вгору при кліку
+            // Плавная прокрутка наверх при клике
             backToTopButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.scrollTo({
@@ -1706,7 +1734,7 @@
                     behavior: 'smooth'
                 });
                 
-                // Фокус на заголовку для доступності
+                // Фокус на заголовке для доступности
                 setTimeout(() => {
                     const mainHeading = document.querySelector('h1');
                     if (mainHeading) {
@@ -1716,7 +1744,7 @@
                 }, 500);
             });
             
-            // Також можна прокручувати вгору по клавіші Home
+            // Также можно прокручивать наверх по клавише Home
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Home') {
                     e.preventDefault();
@@ -1727,11 +1755,11 @@
                 }
             });
             
-            // Анімація появи кнопки при першому появі
+            // Анимация появления кнопки при первом появлении
             setTimeout(() => {
                 if (window.pageYOffset > 300 && !backToTopButton.classList.contains('visible')) {
                     backToTopButton.classList.add('visible');
-                    // Тимчасова підсвітка
+                    // Временная подсветка
                     backToTopButton.style.boxShadow = '0 0 20px rgba(76, 175, 80, 0.8)';
                     setTimeout(() => {
                         backToTopButton.style.boxShadow = '';
@@ -1740,9 +1768,9 @@
             }, 1000);
         });
 
-        // При завантаженні сторінки
+        // При загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
-            // Показуємо підказку при першому відвідуванні
+            // Показываем подсказку при первом посещении
             const isFirstVisit = !localStorage.getItem('microBannerHintShown');
             
             if (isFirstVisit) {
@@ -1754,7 +1782,7 @@
                 }, 2000);
             }
             
-            // Анімація появи баннерів
+            // Анимация появления баннеров
             const banners = document.querySelectorAll('.micro-banner');
             banners.forEach((banner, index) => {
                 banner.style.opacity = '0';
@@ -1767,7 +1795,7 @@
                 }, index * 100);
             });
             
-            // Перевіряємо рекламний баннер
+            // Проверяем рекламный баннер
             try {
                 const adBannerClosed = localStorage.getItem('adBannerClosed');
                 if (adBannerClosed === 'true') {
@@ -1777,7 +1805,7 @@
                     }
                 }
             } catch (e) {
-                console.log('Не вдалося перевірити стан рекламного баннера в localStorage');
+                console.log('Не удалось проверить состояние рекламного баннера в localStorage');
             }
         });
     </script>
