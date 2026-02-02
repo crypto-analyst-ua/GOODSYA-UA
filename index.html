@@ -58,38 +58,150 @@
         display: block;
     }
     
-    /* Стили для иконок контактов в футере */
-    .contact-info div {
+    /* Стили для компактных контактов в футере */
+    .contact-info.compact {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .contact-info.compact .contact-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
         margin: 8px 0;
+        flex-wrap: wrap;
+    }
+
+    .contact-info.compact .contact-item {
+        position: relative;
+        width: 36px;
+        height: 36px;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
-    .contact-info i {
-        width: 20px;
-        margin-right: 10px;
-        text-align: center;
-        font-size: 1.2em;
+    .contact-info.compact .contact-item i {
+        font-size: 1.4em;
+        margin: 0;
+        width: auto;
+        color: white;
+        transition: transform 0.3s ease;
     }
 
-    .contact-info a {
-        color: #fff;
+    .contact-info.compact .contact-item a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
         text-decoration: none;
-        transition: color 0.3s;
+        border-radius: 50%;
     }
 
-    .contact-info a:hover {
-        color: #4CAF50;
+    .contact-info.compact .contact-item:hover i {
+        transform: scale(1.15);
+    }
+
+    /* Иконки мессенджеров с фонами */
+    .contact-info.compact .fa-whatsapp { 
+        color: #25D366 !important; 
+    }
+
+    .contact-info.compact .fa-viber { 
+        color: #7360F2 !important; 
+    }
+
+    .contact-info.compact .fa-telegram { 
+        color: #0088cc !important; 
+    }
+
+    .contact-info.compact .fa-facebook { 
+        color: #1877F2 !important; 
+    }
+
+    .contact-info.compact .fa-phone-alt { 
+        color: #2ecc71 !important; 
+    }
+
+    /* Строка с телефоном */
+    .contact-info.compact .phone-row {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-info.compact .phone {
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 15px;
+        border-radius: 20px;
+    }
+
+    .contact-info.compact .phone a {
+        position: static;
+        width: auto;
+        height: auto;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .contact-info.compact .phone a:hover {
         text-decoration: underline;
+        color: #4CAF50;
     }
 
-    /* Специфичные цвета для мессенджеров */
-    .contact-info .fa-whatsapp { color: #25D366; }
-    .contact-info .fa-viber { color: #7360F2; }
-    .contact-info .fa-telegram { color: #0088cc; }
-    .contact-info .fa-facebook { color: #1877F2; }
-    .contact-info .fa-phone-alt { color: #2ecc71; }
+    /* Адаптация для мобильных */
+    @media (max-width: 768px) {
+        .contact-info.compact .contact-row {
+            gap: 12px;
+        }
+        
+        .contact-info.compact .contact-item {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .contact-info.compact .contact-item i {
+            font-size: 1.2em;
+        }
+        
+        .contact-info.compact .phone {
+            padding: 6px 12px;
+        }
+        
+        .contact-info.compact .phone a {
+            font-size: 13px;
+        }
+    }
 
+    @media (max-width: 480px) {
+        .contact-info.compact .contact-row {
+            gap: 10px;
+        }
+        
+        .contact-info.compact .contact-item {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .contact-info.compact .contact-item i {
+            font-size: 1.1em;
+        }
+        
+        .contact-info.compact .phone a {
+            font-size: 12px;
+        }
+    }
+    
     /* Стили для красивых кнопок вкладок */
     .source-tabs {
         display: flex;
@@ -1294,11 +1406,26 @@
         
         <div class="footer-section">
             <h4>Контакти GOODSYA UA</h4>
-            <div class="contact-info">
-                <div><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/380684296978" target="_blank" rel="noopener">WhatsApp</a></div>
-                <div><i class="fab fa-viber" aria-hidden="true"></i> <a href="viber://chat?number=+380684296978" target="_blank" rel="noopener">Viber</a></div>
-                <div><i class="fab fa-telegram" aria-hidden="true"></i> <a href="https://t.me/Voanarhes" target="_blank" rel="noopener">Telegram</a></div>
-                <div><i class="fab fa-facebook" aria-hidden="true"></i> <a href="https://www.facebook.com/share/1AojRpZmZg/" target="_blank" rel="noopener">Facebook</a></div>
+            <div class="contact-info compact">
+                <div class="contact-row">
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp" aria-hidden="true" title="WhatsApp"></i>
+                        <a href="https://wa.me/380684296978" target="_blank" rel="noopener" aria-label="Написати в WhatsApp"></a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-viber" aria-hidden="true" title="Viber"></i>
+                        <a href="viber://chat?number=+380684296978" target="_blank" rel="noopener" aria-label="Написати в Viber"></a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram" aria-hidden="true" title="Telegram"></i>
+                        <a href="https://t.me/Voanarhes" target="_blank" rel="noopener" aria-label="Написати в Telegram"></a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-facebook" aria-hidden="true" title="Facebook"></i>
+                        <a href="https://www.facebook.com/share/1AojRpZmZg/" target="_blank" rel="noopener" aria-label="Написати в Facebook"></a>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
         
